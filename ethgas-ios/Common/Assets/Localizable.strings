@@ -1,4 +1,5 @@
 "common.app.name" = "ETHGas Alerts";
+"common.widget.name" = "ETHGas Widget";
 "common.signOut" = "Sign out";
 "common.close" = "Close";
 "common.speed.fastest" = "Fastest";
@@ -28,3 +29,6 @@
 "hot.chart.today" = "Today";
 "hot.popup.gasPrice" = "Gas price";
 "hot.popup.gwei" = "Gwei";
+
+// Widget
+"widget.configuration.description" = "This widget shows the current values in Gweis.";

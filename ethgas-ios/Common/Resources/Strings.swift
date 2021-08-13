@@ -9,6 +9,7 @@ extension Resources.Strings {
     
     struct Common {
         static let appName = "common.app.name".localized
+        static let widgetName = "common.widget.name".localized
         static let signOut = "common.signOut".localized
         static let close = "common.close".localized
         
@@ -48,5 +49,9 @@ extension Resources.Strings {
             static let gasPrice = "hot.popup.gasPrice".localized
             static let gwei = "hot.popup.gwei".localized
         }
+    }
+    
+    struct Widget {
+        static let description = "widget.configuration.description".localized
     }
 }
