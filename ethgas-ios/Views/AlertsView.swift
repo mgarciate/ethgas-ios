@@ -62,10 +62,10 @@ struct AlertsView: View {
             }
             .frame(height: 40)
             VStack {
-                Picker(selection: $typeSelected, label: Text("Gas type")) {
-                    Text(AlertGasType.fastest.rawValue.uppercased()).tag(0)
-                    Text(AlertGasType.fast.rawValue.uppercased()).tag(1)
-                    Text(AlertGasType.standard.rawValue.uppercased()).tag(2)
+                Picker(selection: $typeSelected, label: Text(Resources.Strings.Alerts.gasType)) {
+                    Text(AlertGasType.fastest.localized.uppercased()).tag(0)
+                    Text(AlertGasType.fast.localized.uppercased()).tag(1)
+                    Text(AlertGasType.standard.localized.uppercased()).tag(2)
                 }
                 .padding(.top, -10)
                 .padding(.bottom, -5)
@@ -85,7 +85,7 @@ struct AlertsView: View {
                             .foregroundColor(currentDirection() == .up ? .green : .red)
                         Spacer()
                     }
-                    TextField("Set Gwei", text: $value)
+                    TextField(Resources.Strings.Alerts.inputPlaceholder, text: $value)
                         .font(.title2)
                         .multilineTextAlignment(.center)
                         .foregroundColor(.yellow)
@@ -110,7 +110,7 @@ struct AlertsView: View {
                         }
                     }
                 }) {
-                    Text("CREATE ALERT")
+                    Text(Resources.Strings.Alerts.create.uppercased())
                         .frame(minWidth: 0, maxWidth: .infinity)
                 }
                 .disabled(value.isEmpty ||
@@ -130,18 +130,7 @@ struct AlertsView: View {
             
             List {
                 ForEach(alertsData.alerts) { alert in
-                    HStack {
-                        Image(systemName: alert.direction == .up ? "arrow.up" : "arrow.down")
-                            .foregroundColor(alert.direction == .up ? .green : .red)
-                        Text("\(alert.value)")
-                            .frame(minWidth: 40)
-                            .foregroundColor(.red)
-                        Rectangle()
-                            .foregroundColor(.gray)
-                            .frame(width: 1)
-                        Text(alert.type.rawValue.uppercased())
-                            .foregroundColor(.gray)
-                    }
+                    ItemAlertView(alert: alert)
                 }
                 .onDelete { indices in
                     let alertGas = alertsData.alerts[indices.first ?? 0]

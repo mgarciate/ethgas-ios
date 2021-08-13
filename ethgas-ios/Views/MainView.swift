@@ -17,7 +17,7 @@ enum MainActionSheet: Identifiable {
 }
 
 struct MainView: View {
-    @ObservedObject var viewModel = MainViewModel()
+    @StateObject var viewModel = MainViewModel()
     
     @Environment(\.window) var window: UIWindow?
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
@@ -27,7 +27,7 @@ struct MainView: View {
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
             HStack {
-                Text("ETHGas Alerts")
+                Text(Resources.Strings.Common.appName)
                     .font(Font.title.bold())
                 Spacer()
                 HStack {
@@ -81,7 +81,7 @@ struct MainView: View {
                 .frame(height: 50)
             }
             HStack {
-                Text("Recommended Gas Prices in Gwei")
+                Text(Resources.Strings.Main.header)
                 Spacer()
             }
             
@@ -91,22 +91,22 @@ struct MainView: View {
                     .onTapGesture { // (1)
                         self.signInWithAppleButtonTapped() // (2)
                     }
-                Text("(Sign in required to manage alerts)")
+                Text(Resources.Strings.Main.signinRequired)
                     .foregroundColor(.gray)
                     .padding(.top, -15)
             } else {
                 VStack {
-                    CardValueView(viewModel: CardValueViewModel(value: viewModel.currentData.fastest, color: .pink, title: "FASTEST", subtitle: "< ASAP"))
-                    CardValueView(viewModel: CardValueViewModel(value: viewModel.currentData.fast, color: .blue, title: "FAST", subtitle: "< 2m"))
-                    CardValueView(viewModel: CardValueViewModel(value: viewModel.currentData.average, color: .green, title: "STANDARD", subtitle: "< 5m"))
+                    CardValueView(viewModel: CardValueViewModel(value: viewModel.currentData.fastest, color: .pink, title: Resources.Strings.Common.Speed.fastest.uppercased(), subtitle: Resources.Strings.Common.Speed.fastestSubtitle))
+                    CardValueView(viewModel: CardValueViewModel(value: viewModel.currentData.fast, color: .blue, title: Resources.Strings.Common.Speed.fast.uppercased(), subtitle: Resources.Strings.Common.Speed.fastSubtitle))
+                    CardValueView(viewModel: CardValueViewModel(value: viewModel.currentData.average, color: .green, title: Resources.Strings.Common.Speed.standard.uppercased(), subtitle: Resources.Strings.Common.Speed.standardSubtitle))
                     
                     Text("1 ETH = \(String(format: "%.1f", viewModel.currentData.ethusd)) USD")
                     Spacer()
                         .frame(height: 10)
                     HStack(spacing: 30) {
                         VStack(alignment: .leading, spacing: 5) {
-                            Text("24h Max")
-                            Text("24h Min")
+                            Text(Resources.Strings.Main._24hMax)
+                            Text(Resources.Strings.Main._24hMin)
                         }
                         VStack(spacing: 5) {
                             Text("\(viewModel.currentData.fastestMax24h)")
@@ -134,7 +134,7 @@ struct MainView: View {
                             VStack(alignment: .trailing) {
                                 Label("\(viewModel.currentData.dateString)", systemImage: "icloud.and.arrow.down")
                                     .font(.caption)
-                                Button("Sign out") {
+                                Button(Resources.Strings.Common.signOut) {
                                     viewModel.signOut()
                                 }
                             }
@@ -149,7 +149,7 @@ struct MainView: View {
             switch(item) {
             case .alerts:
                 AlertsView(currentData: $viewModel.currentData, actionSheet: $actionSheet, alertsData: AlertsGas.Data(alerts: []))
-                    .navigationTitle("Alerts")
+                    .navigationTitle(Resources.Strings.Alerts.title)
             case .graphs:
                 ChartsView(actionSheet: $actionSheet)
             case .hot:
@@ -172,47 +172,5 @@ struct MainView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
-    }
-}
-
-final class CardValueViewModel: ObservableObject {
-    @Published var value: Int
-    let color: Color
-    let title: String
-    let subtitle: String
-    
-    init(value: Int, color: Color, title: String, subtitle: String) {
-        self.value = value
-        self.color = color
-        self.title = title
-        self.subtitle = subtitle
-    }
-}
-
-struct CardValueView: View {
-    @ObservedObject var viewModel: CardValueViewModel
-    
-    var body: some View {
-        HStack {
-            Text("\(viewModel.value)")
-                .frame(minWidth: 70)
-                .font(.title)
-                .foregroundColor(viewModel.color)
-            Rectangle()
-                .foregroundColor(.gray)
-                .frame(width: 1)
-            Spacer()
-                .frame(width: 20)
-            HStack {
-                Text("\(viewModel.title)")
-                Text("\(viewModel.subtitle)")
-                    .foregroundColor(.gray)
-            }
-            Spacer()
-        }
-        .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 50)
-        .padding()
-        .background(Color.gray.opacity(0.1))
-        .cornerRadius(20)
     }
 }
