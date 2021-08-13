@@ -67,8 +67,8 @@ struct appwidgetEntryView : View {
                             .foregroundColor(.gray)
                             .frame(height: 1)
                         VStack {
-                            Text("FASTEST")
-                            Text("< ASAP")
+                            Text(Resources.Strings.Common.Speed.fastest.uppercased())
+                            Text(Resources.Strings.Common.Speed.fastestSubtitle)
                                 .foregroundColor(.gray)
                         }
                     }
@@ -84,8 +84,8 @@ struct appwidgetEntryView : View {
                             .foregroundColor(.gray)
                             .frame(height: 1)
                         VStack {
-                            Text("FAST")
-                            Text("< 2m")
+                            Text(Resources.Strings.Common.Speed.fast.uppercased())
+                            Text(Resources.Strings.Common.Speed.fastSubtitle)
                                 .foregroundColor(.gray)
                         }
                     }
@@ -103,8 +103,8 @@ struct appwidgetEntryView : View {
                             .foregroundColor(.gray)
                             .frame(height: 1)
                         VStack {
-                            Text("STANDARD")
-                            Text("< 5m")
+                            Text(Resources.Strings.Common.Speed.standard)
+                            Text(Resources.Strings.Common.Speed.standardSubtitle)
                                 .foregroundColor(.gray)
                         }
                     }
@@ -140,8 +140,8 @@ struct appwidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             appwidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("ETHGas Widget")
-        .description("This widget shows the current values in Gweis.")
+        .configurationDisplayName(Resources.Strings.Common.widgetName)
+        .description(Resources.Strings.Widget.description)
         .supportedFamilies([.systemSmall])
     }
 }
