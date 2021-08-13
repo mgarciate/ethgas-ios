@@ -6,103 +6,10 @@
 //
 
 import SwiftUI
-import FirebaseAuth
-import FirebaseDatabase
-import Combine
-
-class HotViewModel: ObservableObject {
-    let ref = Database.database().reference()
-    @Published var hotEntries = [IndexPath: HotEntry?]()
-    @Published var typeSelected = 1
-    
-    private var weeklyEntries = [GraphEntry]()
-    private var handler: UInt?
-    
-    init() {
-        print("init")
-        fetchData()
-    }
-    
-    deinit {
-        print("deinit \(handler)")
-        guard let handler = handler else {
-            return
-        }
-        print("Cancel \(handler)")
-        ref.removeObserver(withHandle: handler)
-    }
-    
-    func fetchData() {
-        guard let _ = Auth.auth().currentUser else { return }
-        handler = ref.child("gasprice/graph").observe(.value) { snapshot in
-            print("*** fetchData \(self.handler)")
-            var dailyEntries = [GraphEntry]()
-            for child in snapshot.childSnapshot(forPath: "daily").children {
-                guard let value = (child as? DataSnapshot)?.value as? NSDictionary,
-                      let timestamp = value["timestamp"] as? Int,
-                      let ethusd = value["ethusd"] as? Double,
-                      let fastest = value["fastest"] as? Int,
-                      let fast = value["fast"] as? Int,
-                      let average = value["average"] as? Int else {
-                    return
-                }
-                dailyEntries.append(GraphEntry(timestamp: timestamp, ethusd: ethusd, fastest: fastest, fast: fast, average: average))
-            }
-            self.weeklyEntries = snapshot.childSnapshot(forPath: "weekly").children.map { (child) -> GraphEntry in
-                guard let value = (child as? DataSnapshot)?.value as? NSDictionary,
-                      let timestamp = value["timestamp"] as? Int,
-                      let ethusd = value["ethusd"] as? Double,
-                      let fastest = value["fastest"] as? Int,
-                      let fast = value["fast"] as? Int,
-                      let average = value["average"] as? Int else {
-                    return GraphEntry(timestamp: 0, ethusd: 0, fastest: 0, fast: 0, average: 0)
-                }
-                return GraphEntry(timestamp: timestamp, ethusd: ethusd, fastest: fastest, fast: fast, average: average)
-            }
-            self.formatWeeklyEntries()
-        }
-    }
-    
-    private func formatWeeklyEntries() {
-        var aux = [IndexPath: HotEntry?]()
-        let values: [Int] = weeklyEntries.map {
-            switch typeSelected {
-            case 0:
-                return $0.fastest
-            case 1:
-                return $0.fast
-            default:
-                return $0.average
-            }
-        }
-        let valueMin = values.min() ?? 0
-        let valueMax = values.max() ?? Int.max
-        weeklyEntries.forEach { entry in
-            if let day = entry.dayDifference, day < 7, day >= 0, let hour = entry.hour, hour < 24, hour >= 0 {
-                let value: Int
-                switch typeSelected {
-                case 0:
-                    value = entry.fastest
-                case 1:
-                    value = entry.fast
-                default:
-                    value = entry.average
-                }
-                aux[IndexPath(row: hour, section: day)] = HotEntry(entry: entry, value: value, alpha: (Double(entry.fast - valueMin) / Double(valueMax - valueMin)))
-            }
-        }
-        hotEntries = aux
-        print("*** \(hotEntries.count)")
-    }
-    
-    func valueSelected(_ value: Int) {
-        formatWeeklyEntries()
-    }
-}
 
 struct HotView: View {
     @Binding var actionSheet: MainActionSheet?
-    @ObservedObject private var viewModel = HotViewModel()
+    @StateObject private var viewModel = HotViewModel()
     
     @State private var isPopupPresented = false
     @State private var selectedEntry: HotEntry?
@@ -120,7 +27,7 @@ struct HotView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 50, height: 50)
-                    Text("ETHGas Alerts")
+                    Text(Resources.Strings.Common.appName)
                         .font(Font.title3.bold())
                     Spacer()
                     Button(action: {
@@ -138,10 +45,10 @@ struct HotView: View {
                 }
                 .padding(.horizontal)
                 .padding(.top, 10)
-                Picker(selection: $viewModel.typeSelected.onChange(viewModel.valueSelected), label: Text("Gas type")) {
-                    Text(AlertGasType.fastest.rawValue.uppercased()).tag(0)
-                    Text(AlertGasType.fast.rawValue.uppercased()).tag(1)
-                    Text(AlertGasType.standard.rawValue.uppercased()).tag(2)
+                Picker(selection: $viewModel.typeSelected.onChange(viewModel.valueSelected), label: Text(Resources.Strings.Alerts.gasType)) {
+                    Text(AlertGasType.fastest.localized.uppercased()).tag(0)
+                    Text(AlertGasType.fast.localized.uppercased()).tag(1)
+                    Text(AlertGasType.standard.localized.uppercased()).tag(2)
                 }
                 .padding(.horizontal)
                 .padding(.top, -5)
@@ -158,7 +65,7 @@ struct HotView: View {
                                 Rectangle()
                                     .frame(height: 1)
                                     .padding(.horizontal, 5)
-                                Text("Today")
+                                Text(Resources.Strings.Hot.today)
                             }
                             ForEach(0..<24, id: \.self) { index in
                                 HStack(spacing: 1) {
@@ -194,7 +101,7 @@ struct HotView: View {
                                 Rectangle()
                                     .frame(height: 1)
                                     .padding(.horizontal, 5)
-                                Text("Today")
+                                Text(Resources.Strings.Hot.today)
                             }
                         }
                         .padding([.horizontal, .bottom], 10)
@@ -214,18 +121,18 @@ struct HotView: View {
                         .padding(.bottom, 2)
                         HStack {
                             HStack {
-                                Text("Gas price")
+                                Text(Resources.Strings.Hot.Popup.gasPrice)
                                 Circle()
                                     .frame(width: 15, height: 15)
                                     .foregroundColor(Color.red.opacity(selectedEntry?.alpha ?? 0.0))
                             }
                             Spacer()
-                            Text("Gwei")
+                            Text(Resources.Strings.Hot.Popup.gwei)
                         }
                         .padding(.bottom, 2)
                         .foregroundColor(Color("Gray"))
                         HStack {
-                            Text("Fastest")
+                            Text(Resources.Strings.Common.Speed.fastest)
                             Spacer()
                             if let value = selectedEntry?.entry.fastest {
                                 Text("\(value)")
@@ -233,7 +140,7 @@ struct HotView: View {
                         }
                         .foregroundColor(Color("Black"))
                         HStack {
-                            Text("Fast")
+                            Text(Resources.Strings.Common.Speed.fast)
                             Spacer()
                             if let value = selectedEntry?.entry.fast {
                                 Text("\(value)")
@@ -241,7 +148,7 @@ struct HotView: View {
                         }
                         .foregroundColor(Color("Black"))
                         HStack {
-                            Text("Standard")
+                            Text(Resources.Strings.Common.Speed.standard)
                             Spacer()
                             if let value = selectedEntry?.entry.average {
                                 Text("\(value)")
@@ -253,7 +160,7 @@ struct HotView: View {
                             Button(action: {
                                 isPopupPresented = false
                             }, label: {
-                                Text("Close")
+                                Text(Resources.Strings.Common.close)
                             })
                         }
                     }.padding()
@@ -262,11 +169,8 @@ struct HotView: View {
                 .cornerRadius(20).shadow(radius: 20)
             }
         }
-        .onAppear() {
-            print("*** onAppear")
-        }
         .onDisappear() {
-            print("*** onDisappear")
+            viewModel.removeObserver()
         }
     }
     

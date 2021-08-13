@@ -16,7 +16,11 @@ struct LineView : UIViewRepresentable {
     var entries : [GraphEntry]
     let graphType: GraphType
     let description: String
-    private let labels = ["Fastest", "Fast", "Standard"]
+    private let labels = [
+        Resources.Strings.Common.Speed.fastest,
+        Resources.Strings.Common.Speed.fast,
+        Resources.Strings.Common.Speed.standard
+    ]
     private let colors: [NSUIColor] = [.systemPink, .blue, .green]
     // this func is required to conform to UIViewRepresentable protocol
     func makeUIView(context: Context) -> LineChartView {

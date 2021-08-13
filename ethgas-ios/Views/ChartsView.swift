@@ -22,7 +22,7 @@ struct ChartsView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 50, height: 50)
-                Text("ETHGas Alerts")
+                Text(Resources.Strings.Common.appName)
                     .font(Font.title3.bold())
                 Spacer()
                 Button(action: {
@@ -43,11 +43,11 @@ struct ChartsView: View {
             .padding(.top, 10)
             VStack {
                 if dailyEntries.count > 0 {
-                    LineView(entries: dailyEntries, graphType: .daily, description: "Last 24 hours")
+                    LineView(entries: dailyEntries, graphType: .daily, description: Resources.Strings.Charts._24h)
                         .frame(minHeight: 0, maxHeight: .infinity)
                 }
                 if weeklyEntries.count > 0 {
-                    LineView(entries: weeklyEntries, graphType: .weekly, description: "Last 7 days")
+                    LineView(entries: weeklyEntries, graphType: .weekly, description: Resources.Strings.Charts._7d)
                         .frame(minHeight: 0, maxHeight: .infinity)
                 }
                 Spacer()
