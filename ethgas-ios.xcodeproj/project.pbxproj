@@ -23,8 +23,6 @@
 		090FB44025D0887600D12456 /* Graphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FB43F25D0887600D12456 /* Graphs.swift */; };
 		0933DC7926975FFC00559EB1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0933DC7826975FFC00559EB1 /* MainViewModel.swift */; };
 		0933DC7D2697627600559EB1 /* HotEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0933DC7C2697627600559EB1 /* HotEntry.swift */; };
-		096173FF26C6E27000683EBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 096173FE26C6E27000683EBE /* Localizable.strings */; };
-		0961740026C6E27000683EBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 096173FE26C6E27000683EBE /* Localizable.strings */; };
 		0961740426C6E2B800683EBE /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961740326C6E2B800683EBE /* Resources.swift */; };
 		0961740526C6E2B800683EBE /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961740326C6E2B800683EBE /* Resources.swift */; };
 		0961740826C6E2CF00683EBE /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961740726C6E2CF00683EBE /* Strings.swift */; };
@@ -36,6 +34,8 @@
 		0961741926C6E90700683EBE /* CardValueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961741826C6E90700683EBE /* CardValueViewModel.swift */; };
 		0961741C26C6F04900683EBE /* ItemAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961741B26C6F04900683EBE /* ItemAlertView.swift */; };
 		0961741F26C6FCA900683EBE /* HotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961741E26C6FCA900683EBE /* HotViewModel.swift */; };
+		0961742326C82FC600683EBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0961742626C82FC600683EBE /* Localizable.strings */; };
+		0961742426C82FC600683EBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0961742626C82FC600683EBE /* Localizable.strings */; };
 		09B0C21C260A3D2E00C73CB6 /* HotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B0C21B260A3D2E00C73CB6 /* HotView.swift */; };
 		09BD52E925B393FE00D751F2 /* AlertsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD52E825B393FD00D751F2 /* AlertsView.swift */; };
 		09BD52ED25B39B9F00D751F2 /* AlertGas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD52EC25B39B9F00D751F2 /* AlertGas.swift */; };
@@ -106,7 +106,6 @@
 		090FB43F25D0887600D12456 /* Graphs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graphs.swift; sourceTree = "<group>"; };
 		0933DC7826975FFC00559EB1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		0933DC7C2697627600559EB1 /* HotEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotEntry.swift; sourceTree = "<group>"; };
-		096173FE26C6E27000683EBE /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		0961740326C6E2B800683EBE /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		0961740726C6E2CF00683EBE /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		0961740C26C6E34600683EBE /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
@@ -114,6 +113,8 @@
 		0961741826C6E90700683EBE /* CardValueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValueViewModel.swift; sourceTree = "<group>"; };
 		0961741B26C6F04900683EBE /* ItemAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAlertView.swift; sourceTree = "<group>"; };
 		0961741E26C6FCA900683EBE /* HotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotViewModel.swift; sourceTree = "<group>"; };
+		0961742526C82FC600683EBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0961742826C82FCC00683EBE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		09B0C21B260A3D2E00C73CB6 /* HotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotView.swift; sourceTree = "<group>"; };
 		09BD52E825B393FD00D751F2 /* AlertsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsView.swift; sourceTree = "<group>"; };
 		09BD52EC25B39B9F00D751F2 /* AlertGas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertGas.swift; sourceTree = "<group>"; };
@@ -250,7 +251,7 @@
 		096173FC26C6E21300683EBE /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				096173FE26C6E27000683EBE /* Localizable.strings */,
+				0961742626C82FC600683EBE /* Localizable.strings */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -397,6 +398,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 0906FD5825A3B42D005B4992;
 			packageReferences = (
@@ -419,7 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0906FD6C25A3B430005B4992 /* Preview Assets.xcassets in Resources */,
-				096173FF26C6E27000683EBE /* Localizable.strings in Resources */,
+				0961742326C82FC600683EBE /* Localizable.strings in Resources */,
 				0906FD6925A3B430005B4992 /* Assets.xcassets in Resources */,
 				0906FD8A25A44956005B4992 /* GoogleService-Info.plist in Resources */,
 			);
@@ -430,7 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09D2594826184FA100815117 /* Assets.xcassets in Resources */,
-				0961740026C6E27000683EBE /* Localizable.strings in Resources */,
+				0961742426C82FC600683EBE /* Localizable.strings in Resources */,
 				09D259632618704000815117 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,6 +495,18 @@
 			targetProxy = 09D2594A26184FA100815117 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0961742626C82FC600683EBE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0961742526C82FC600683EBE /* en */,
+				0961742826C82FCC00683EBE /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0906FD6E25A3B430005B4992 /* Debug */ = {
@@ -632,7 +646,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -660,7 +674,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -684,7 +698,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas.appwidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -708,7 +722,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas.appwidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

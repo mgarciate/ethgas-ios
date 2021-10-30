@@ -1,0 +1,34 @@
+"common.app.name" = "ETHGas费用提醒";
+"common.widget.name" = "ETHGas小组件";
+"common.signOut" = "退出";
+"common.close" = "关闭";
+"common.speed.fastest" = "极速";
+"common.speed.fast" = "快速";
+"common.speed.standard" = "标准";
+"common.speed.fastest.subtitle" = "<尽快";
+"common.speed.fast.subtitle" = "<2分钟内";
+"common.speed.standard.subtitle" = "<5分钟内";
+
+// Main screen
+"main.header.text" = "Gas费用（Gwei）推荐价";
+"main.signin.required" = "(请登录账号以管理提醒)";
+"main.24hMax" = "最高24小时";
+"main.24hMin" = "最低24小时";
+
+// Alerts screen
+"alerts.title" = "提醒";
+"alerts.gasType" = "Gas费用类型";
+"alerts.input.placeholder" = "设置Gwei";
+"alerts.button.create" = "创建提醒";
+
+// Charts screen
+"charts.chart24h.description" = "最近24小时";
+"charts.chart7d.description" = "最近7日";
+
+// Hot screen
+"hot.chart.today" = "今日";
+"hot.popup.gasPrice" = "Gas费价格";
+"hot.popup.gwei" = "Gwei";
+
+// Widget
+"widget.configuration.description" = "本组件以Gwei单位显示当前值。";
