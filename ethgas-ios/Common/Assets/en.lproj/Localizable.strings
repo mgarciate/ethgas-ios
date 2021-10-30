@@ -1,0 +1,34 @@
+"common.app.name" = "ETHGas Alerts";
+"common.widget.name" = "ETHGas Widget";
+"common.signOut" = "Sign out";
+"common.close" = "Close";
+"common.speed.fastest" = "Fastest";
+"common.speed.fast" = "Fast";
+"common.speed.standard" = "Standard";
+"common.speed.fastest.subtitle" = "< ASAP";
+"common.speed.fast.subtitle" = "< 2m";
+"common.speed.standard.subtitle" = "< 5m";
+
+// Main screen
+"main.header.text" = "Recommended Gas Prices in Gwei";
+"main.signin.required" = "(Sign in required to manage alerts)";
+"main.24hMax" = "24h Max";
+"main.24hMin" = "24h Min";
+
+// Alerts screen
+"alerts.title" = "Alerts";
+"alerts.gasType" = "Gas type";
+"alerts.input.placeholder" = "Set Gwei";
+"alerts.button.create" = "Create alert";
+
+// Charts screen
+"charts.chart24h.description" = "Last 24 hours";
+"charts.chart7d.description" = "Last 7 days";
+
+// Hot screen
+"hot.chart.today" = "Today";
+"hot.popup.gasPrice" = "Gas price";
+"hot.popup.gwei" = "Gwei";
+
+// Widget
+"widget.configuration.description" = "This widget shows the current values in Gweis.";

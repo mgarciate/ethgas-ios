@@ -13,6 +13,16 @@ enum AlertGasDirection: String {
 
 enum AlertGasType: String {
     case standard, fast, fastest
+    var localized : String {
+        switch self {
+        case .fastest :
+            return Resources.Strings.Common.Speed.fastest
+        case .fast :
+            return Resources.Strings.Common.Speed.fast
+        case .standard :
+            return Resources.Strings.Common.Speed.standard
+        }
+    }
 }
 
 struct AlertGas: Identifiable {
