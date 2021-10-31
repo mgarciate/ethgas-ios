@@ -22,6 +22,19 @@ struct ItemAlertView: View {
                 .frame(width: 1)
             Text(alert.type.localized.uppercased())
                 .foregroundColor(.gray)
+            Spacer()
+            Text(alert.frequency.localized)
+                .foregroundColor(.gray)
+                .padding(2)
+                .border(Color.gray, width: 1)
+                .font(.caption)
         }
+    }
+}
+
+struct ItemAlertView_Previews: PreviewProvider {
+    static var previews: some View {
+        ItemAlertView(alert: AlertGas(value: 80, direction: AlertGasDirection.down, type: .standard, frequency: .once))
+            .previewLayout(.fixed(width: 340, height: 50))
     }
 }

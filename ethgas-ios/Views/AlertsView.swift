@@ -14,6 +14,8 @@ struct AlertsView: View {
     @State var alertsData: AlertsGas.Data
     @State private var typeSelected = 1
     @State private var value = ""
+    @State private var frequency: AlertGasFrequency = .once
+    @State private var showingFrequencySelection = false
     
     private let firebaseService: FirebaseService = FirebaseServiceImpl()
     
@@ -97,29 +99,39 @@ struct AlertsView: View {
                 Spacer()
                     .frame(height: 10)
                 
-                Button(action: {
-                    guard let gasValue = Int(value) else { return }
-                    self.firebaseService.saveAlert(AlertGas(value: gasValue, direction: currentDirection(), type: currentGasType())) { result in
-                        switch result {
-                        case .success:
-//                            withAnimation {
-//                                alertsData.alerts.append(alert)
-//                            }
-                            value = ""
-                        case .failure: break
+                HStack {
+                    Button(action: {
+                        guard let gasValue = Int(value) else { return }
+                        self.firebaseService.saveAlert(AlertGas(value: gasValue, direction: currentDirection(), type: currentGasType(), frequency: frequency)) { result in
+                            switch result {
+                            case .success:
+                                //                            withAnimation {
+                                //                                alertsData.alerts.append(alert)
+                                //                            }
+                                value = ""
+                            case .failure: break
+                            }
                         }
+                    }) {
+                        Text(Resources.Strings.Alerts.create.uppercased())
+                            .frame(minWidth: 0, maxWidth: .infinity)
                     }
-                }) {
-                    Text(Resources.Strings.Alerts.create.uppercased())
-                        .frame(minWidth: 0, maxWidth: .infinity)
+                    .disabled(value.isEmpty ||
+                                alertsData.alerts.contains(where: { $0.type == currentGasType() && $0.value == Int(value) ?? -1 }) ||
+                                Int(value) ?? 0 <= 0 ||
+                                alertsData.alerts.count >= 20)
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 44, maxHeight: 44)
+                    .background(Color.yellow)
+                    .foregroundColor(.black)
+                    
+                    Button(action: {
+                        showingFrequencySelection = true
+                    }) {
+                        Text(frequency.localized)
+                            .foregroundColor(Color("Black"))
+                    }
+                    .frame(minWidth: 0, maxWidth: 120, minHeight: 44, maxHeight: 44)
                 }
-                .disabled(value.isEmpty ||
-                            alertsData.alerts.contains(where: { $0.type == currentGasType() && $0.value == Int(value) ?? -1 }) ||
-                            Int(value) ?? 0 <= 0 ||
-                            alertsData.alerts.count >= 20)
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 44, maxHeight: 44)
-                .background(Color.yellow)
-                .foregroundColor(.black)
             }
             .padding()
             .padding(.bottom, -10)
@@ -141,6 +153,9 @@ struct AlertsView: View {
             }
             
             Spacer()
+        }
+        .sheet(isPresented: $showingFrequencySelection) {
+            FrequencySelectionView(frequency: $frequency)
         }
         .onAppear() {
             listAlerts()
@@ -188,6 +203,6 @@ struct AlertsView: View {
 
 struct AlertsView_Previews: PreviewProvider {
     static var previews: some View {
-        AlertsView(currentData: .constant(CurrentData.dummyData), actionSheet: .constant(.alerts), alertsData: AlertsGas.Data(alerts: [AlertGas(value: 80, direction: AlertGasDirection.down, type: .standard)]))
+        AlertsView(currentData: .constant(CurrentData.dummyData), actionSheet: .constant(.alerts), alertsData: AlertsGas.Data(alerts: [AlertGas(value: 80, direction: AlertGasDirection.down, type: .standard, frequency: .once)]))
     }
 }

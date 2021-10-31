@@ -15,4 +15,8 @@ struct ethgas_iosApp: App {
             MainView()
         }
     }
+    
+    init() {
+        UIScrollView.appearance().keyboardDismissMode = .onDrag
+    }
 }
