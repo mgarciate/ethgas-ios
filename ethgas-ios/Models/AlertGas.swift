@@ -24,25 +24,41 @@ enum AlertGasType: String {
         }
     }
 }
+enum AlertGasFrequency: String {
+    case once, daily, always
+    var localized : String {
+        switch self {
+        case .once :
+            return Resources.Strings.Alerts.Frequency.onlyOnce
+        case .daily :
+            return Resources.Strings.Alerts.Frequency.onceADay
+        case .always :
+            return Resources.Strings.Alerts.Frequency.always
+        }
+    }
+}
 
 struct AlertGas: Identifiable {
     let id: String
     let value: Int
     let direction: AlertGasDirection
     let type: AlertGasType
+    let frequency: AlertGasFrequency
     
-    init(value: Int, direction: AlertGasDirection, type: AlertGasType) {
+    init(value: Int, direction: AlertGasDirection, type: AlertGasType, frequency: AlertGasFrequency) {
         self.id = UUID().uuidString
         self.value = value
         self.direction = direction
         self.type = type
+        self.frequency = frequency
     }
     
-    init(id: String, value: Int, direction: AlertGasDirection, type: AlertGasType) {
+    init(id: String, value: Int, direction: AlertGasDirection, type: AlertGasType, frequency: AlertGasFrequency) {
         self.id = id
         self.value = value
         self.direction = direction
         self.type = type
+        self.frequency = frequency
     }
 }
 

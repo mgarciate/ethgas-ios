@@ -35,6 +35,13 @@ extension Resources.Strings {
         static let gasType = "alerts.gasType".localized
         static let inputPlaceholder = "alerts.input.placeholder".localized
         static let create = "alerts.button.create".localized
+        
+        struct Frequency {
+            static let title = "alerts.frequency.title".localized
+            static let onlyOnce = "alerts.frequency.onlyOnce".localized
+            static let onceADay = "alerts.frequency.onceADay".localized
+            static let always = "alerts.frequency.always".localized
+        }
     }
     
     struct Charts {

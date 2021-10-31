@@ -20,6 +20,10 @@
 "alerts.gasType" = "Gas type";
 "alerts.input.placeholder" = "Set Gwei";
 "alerts.button.create" = "Create alert";
+"alerts.frequency.title" = "Frequency";
+"alerts.frequency.onlyOnce" = "Only Once";
+"alerts.frequency.onceADay" = "Once a day";
+"alerts.frequency.always" = "Always";
 
 // Charts screen
 "charts.chart24h.description" = "Last 24 hours";

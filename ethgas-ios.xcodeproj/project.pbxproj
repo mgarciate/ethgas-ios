@@ -54,6 +54,7 @@
 		09D2595B26186EC500815117 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 09D2595A26186EC500815117 /* FirebaseDatabase */; };
 		09D2596026186F7900815117 /* CurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD52FD25B4571D00D751F2 /* CurrentData.swift */; };
 		09D259632618704000815117 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09D259622618704000815117 /* GoogleService-Info.plist */; };
+		09F69E6C272D2356000996A2 /* FrequencySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F69E6B272D2356000996A2 /* FrequencySelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		09D2594926184FA100815117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09D2595726186A7D00815117 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09D259622618704000815117 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		09F69E6B272D2356000996A2 /* FrequencySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequencySelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 				090FB43B25CF379900D12456 /* ChartsView.swift */,
 				090FB42A25CF2FD200D12456 /* LineView.swift */,
 				09B0C21B260A3D2E00C73CB6 /* HotView.swift */,
+				09F69E6B272D2356000996A2 /* FrequencySelectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 			files = (
 				0961741C26C6F04900683EBE /* ItemAlertView.swift in Sources */,
 				0961741526C6E8E700683EBE /* CardValueView.swift in Sources */,
+				09F69E6C272D2356000996A2 /* FrequencySelectionView.swift in Sources */,
 				0906FD7D25A3B66F005B4992 /* AppDelegate.swift in Sources */,
 				090FB42B25CF2FD200D12456 /* LineView.swift in Sources */,
 				0961740826C6E2CF00683EBE /* Strings.swift in Sources */,

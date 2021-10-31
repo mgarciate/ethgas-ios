@@ -70,10 +70,11 @@ class FirebaseServiceImpl: FirebaseService {
                       let gas = value["value"] as? Int,
                       let directionString = value["direction"] as? String,
                       let direction = AlertGasDirection(rawValue: directionString),
-                      let type = AlertGasType(rawValue: value["type"] as? String ?? "standard") else {
+                      let type = AlertGasType(rawValue: value["type"] as? String ?? "standard"),
+                      let frequency = AlertGasFrequency(rawValue: value["frequency"] as? String ?? "once") else {
                     return
                 }
-                alerts.append(AlertGas(id: id, value: gas, direction: direction, type: type))
+                alerts.append(AlertGas(id: id, value: gas, direction: direction, type: type, frequency: frequency))
             }
             completion(.success(AlertsGas(alerts: alerts)))
         }
@@ -91,12 +92,13 @@ class FirebaseServiceImpl: FirebaseService {
                     "value": alert.value,
                     "direction": alert.direction.rawValue,
                     "type": alert.type.rawValue,
-                    "userId": user.uid] as [String : Any]
+                    "userId": user.uid,
+                    "frequency": alert.frequency.rawValue] as [String : Any]
         let childUpdates = ["/users/\(user.uid)/alerts/\(key)": post,
                             "/alertsUpDown/\(key)": post]
         ref.updateChildValues(childUpdates) { error, ref in
             guard let error = error else {
-                completion(.success(AlertGas(id: key, value: alert.value, direction: alert.direction, type: alert.type)))
+                completion(.success(AlertGas(id: key, value: alert.value, direction: alert.direction, type: alert.type, frequency: alert.frequency)))
                 return
             }
             completion(.failure(error))
