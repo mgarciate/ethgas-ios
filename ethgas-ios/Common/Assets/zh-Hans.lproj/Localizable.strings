@@ -20,6 +20,10 @@
 "alerts.gasType" = "Gas费用类型";
 "alerts.input.placeholder" = "设置Gwei";
 "alerts.button.create" = "创建提醒";
+"alerts.frequency.title" = "频率";
+"alerts.frequency.onlyOnce" = "只有一次";
+"alerts.frequency.onceADay" = "一天一次";
+"alerts.frequency.always" = "总是";
 
 // Charts screen
 "charts.chart24h.description" = "最近24小时";
