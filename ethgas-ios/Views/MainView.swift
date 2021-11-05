@@ -9,7 +9,7 @@ import SwiftUI
 import AuthenticationServices
 
 enum MainActionSheet: Identifiable {
-    case alerts, graphs, hot
+    case alerts, graphs, hot, fees
     
     var id: Int {
         hashValue
@@ -43,8 +43,8 @@ struct MainView: View {
                             .scaledToFit()
                             .padding(10)
                             .frame(width: 50, height: 50)
-                            .foregroundColor(.white)
-                            .background(Color.black)
+                            .foregroundColor(Color("White"))
+                            .background(Color("Black"))
                             .cornerRadius(25)
                     }
                     Button(action: {
@@ -58,8 +58,8 @@ struct MainView: View {
                             .resizable()
                             .scaledToFit()
                             .padding(10)
-                            .foregroundColor(.white)
-                            .background(Color.black)
+                            .foregroundColor(Color("White"))
+                            .background(Color("Black"))
                             .cornerRadius(25)
                     }
                     Button(action: {
@@ -73,8 +73,8 @@ struct MainView: View {
                             .resizable()
                             .scaledToFit()
                             .padding(10)
-                            .foregroundColor(.white)
-                            .background(Color.black)
+                            .foregroundColor(Color("White"))
+                            .background(Color("Black"))
                             .cornerRadius(25)
                     }
                 }
@@ -100,9 +100,24 @@ struct MainView: View {
                     CardValueView(viewModel: CardValueViewModel(value: viewModel.currentData.fast, color: .blue, title: Resources.Strings.Common.Speed.fast.uppercased(), subtitle: Resources.Strings.Common.Speed.fastSubtitle))
                     CardValueView(viewModel: CardValueViewModel(value: viewModel.currentData.average, color: .green, title: Resources.Strings.Common.Speed.standard.uppercased(), subtitle: Resources.Strings.Common.Speed.standardSubtitle))
                     
-                    Text("1 ETH = \(String(format: "%.1f", viewModel.currentData.ethusd)) USD")
+                    HStack {
+                        Text("1 ETH = \(String(format: "%.1f", viewModel.currentData.ethusd)) USD")
+                        Button(action: {
+                            actionSheet = .fees
+                        }) {
+                            Image("dollar")
+                                .resizable()
+                                .scaledToFit()
+                                .padding(5)
+                                .foregroundColor(Color("White"))
+                                .background(Color("Black"))
+                                .cornerRadius(15)
+                        }
+                        .frame(height: 30)
+                    }
                     Spacer()
                         .frame(height: 10)
+                    
                     HStack(spacing: 30) {
                         VStack(alignment: .leading, spacing: 5) {
                             Text(Resources.Strings.Main._24hMax)
@@ -154,6 +169,8 @@ struct MainView: View {
                 ChartsView(actionSheet: $actionSheet)
             case .hot:
                 HotView(actionSheet: $actionSheet)
+            case .fees:
+                FeesView(currentData: $viewModel.currentData, actionSheet: $actionSheet)
             }
         }
     }

@@ -32,8 +32,8 @@ struct ChartsView: View {
                         .resizable()
                         .scaledToFit()
                         .padding(5)
-                        .foregroundColor(.white)
-                        .background(Color.black)
+                        .foregroundColor(Color("White"))
+                        .background(Color("Black"))
                         .cornerRadius(15)
                     
                 }
