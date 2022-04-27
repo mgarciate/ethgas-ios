@@ -173,6 +173,15 @@ struct MainView: View {
                 FeesView(currentData: $viewModel.currentData, actionSheet: $actionSheet)
             }
         }
+        .alert(isPresented: $viewModel.isMigrationAlertPresented) {
+            Alert(title: Text(Resources.Strings.Common.appName),
+                  message: Text(Resources.Strings.Migration.v150.message),
+                  primaryButton: .cancel(),
+                  secondaryButton: .destructive(Text(Resources.Strings.Common.signOut)) {
+                viewModel.signOut()
+            }
+            )
+        }
     }
     
     func signInWithAppleButtonTapped() {

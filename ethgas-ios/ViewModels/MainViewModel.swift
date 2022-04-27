@@ -11,18 +11,41 @@ import WidgetKit
 final class MainViewModel: ObservableObject {
     @Published var currentData: CurrentData = CurrentData.dummyData
     @Published var isSignedIn = false
+    @Published var isMigrationAlertPresented = false
     private let firebaseService: FirebaseService = FirebaseServiceImpl()
     
     init() {
         Auth.auth().addStateDidChangeListener { [weak self] (auth, user) in
             guard let _ = user else {
+                self?.checkMigrationFrom140(false)
                 self?.isSignedIn = true
                 return
             }
             self?.isSignedIn = false
             self?.saveToken()
             self?.fetchData()
+            self?.checkMigrationFrom140(true)
         }
+    }
+    
+    private func checkMigrationFrom140(_ migration: Bool) {
+        // Show migration alert for already signed users and version = 1.5.0
+        let migrationAlert = UserDefaults.standard.bool(forKey: "migration_alert_150")
+        guard !migrationAlert else { return }
+        guard let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String,
+              appVersion == "1.5.0" else { return }
+        guard migration else {
+            saveMigrationFrom140()
+            return
+        }
+        guard !isSignedIn else { return }
+        saveMigrationFrom140()
+        isMigrationAlertPresented = true
+    }
+    
+    private func saveMigrationFrom140() {
+        UserDefaults.standard.set(true, forKey: "migration_alert_150")
+        UserDefaults.standard.synchronize()
     }
     
     private func saveToken() {

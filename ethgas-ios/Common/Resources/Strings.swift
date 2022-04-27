@@ -61,4 +61,10 @@ extension Resources.Strings {
     struct Widget {
         static let description = "widget.configuration.description".localized
     }
+    
+    struct Migration {
+        struct v150 {
+            static let message = "migration.150.message".localized
+        }
+    }
 }
