@@ -36,3 +36,6 @@
 
 // Widget
 "widget.configuration.description" = "This widget shows the current values in Gweis.";
+
+// Migration 1.5.0
+"migration.150.message" = "Due to a disruptive change in the application's notification server, if you have updated the application to version 1.5.0 you may experience problems with alerts (push notifications). To correct this bug, please sign out and then uninstall/install the App again. You will need to review and create your alerts after the steps above.";
