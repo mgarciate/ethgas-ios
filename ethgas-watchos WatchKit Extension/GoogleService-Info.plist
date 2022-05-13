@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>166713538156-2ci23bgtbjcoojdott3jtdb9m79vb73v.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.166713538156-2ci23bgtbjcoojdott3jtdb9m79vb73v</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAMlBvJ3CzRxZ7qDN0XGPzxxBtw7bDCYSc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>166713538156</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mgarciate.ethgas.watchkitapp</string>
+	<key>PROJECT_ID</key>
+	<string>ethgas-prod</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ethgas-prod.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:166713538156:ios:3d22d3ce485fa490490a49</string>
+	<key>DATABASE_URL</key>
+	<string>https://ethgas-prod-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

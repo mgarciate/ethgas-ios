@@ -24,7 +24,6 @@
 		0933DC7926975FFC00559EB1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0933DC7826975FFC00559EB1 /* MainViewModel.swift */; };
 		0933DC7D2697627600559EB1 /* HotEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0933DC7C2697627600559EB1 /* HotEntry.swift */; };
 		093A7E762815494D00593BE2 /* watchextensionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093A7E752815494D00593BE2 /* watchextensionApp.swift */; };
-		093A7E78281549BD00593BE2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 093A7E77281549BD00593BE2 /* FirebaseAuth */; };
 		093A7E7A281549BD00593BE2 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 093A7E79281549BD00593BE2 /* FirebaseDatabase */; };
 		0961740426C6E2B800683EBE /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961740326C6E2B800683EBE /* Resources.swift */; };
 		0961740526C6E2B800683EBE /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961740326C6E2B800683EBE /* Resources.swift */; };
@@ -46,9 +45,7 @@
 		0966585127B739580073AB79 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0966585027B739580073AB79 /* ComplicationController.swift */; };
 		0966585327B739590073AB79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0966585227B739590073AB79 /* Assets.xcassets */; };
 		0966585627B739590073AB79 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0966585527B739590073AB79 /* Preview Assets.xcassets */; };
-		0966585B27B739590073AB79 /* ethgas-watchos.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0966583B27B739560073AB79 /* ethgas-watchos.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		0966586527B73C040073AB79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0906FD6825A3B430005B4992 /* Assets.xcassets */; };
-		0966586627B742DC0073AB79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0906FD6825A3B430005B4992 /* Assets.xcassets */; };
+		0966585B27B739590073AB79 /* ETHWatch Alerts.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0966583B27B739560073AB79 /* ETHWatch Alerts.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		09852A152735A93B00490B8A /* FeesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09852A142735A93B00490B8A /* FeesView.swift */; };
 		09852A182735B78000490B8A /* ItemFeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09852A172735B78000490B8A /* ItemFeeView.swift */; };
 		09852A1B2735BF2900490B8A /* CardValueSmallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09852A1A2735BF2900490B8A /* CardValueSmallView.swift */; };
@@ -70,6 +67,21 @@
 		09D2595B26186EC500815117 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 09D2595A26186EC500815117 /* FirebaseDatabase */; };
 		09D2596026186F7900815117 /* CurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD52FD25B4571D00D751F2 /* CurrentData.swift */; };
 		09D259632618704000815117 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09D259622618704000815117 /* GoogleService-Info.plist */; };
+		09DCD8B02819CE64004D51EF /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961740326C6E2B800683EBE /* Resources.swift */; };
+		09DCD8B12819CE67004D51EF /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961740726C6E2CF00683EBE /* Strings.swift */; };
+		09DCD8B22819CE94004D51EF /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961740C26C6E34600683EBE /* String+Localizable.swift */; };
+		09DCD8B32819CF09004D51EF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0961742626C82FC600683EBE /* Localizable.strings */; };
+		09DCD8B52819D03E004D51EF /* CurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD52FD25B4571D00D751F2 /* CurrentData.swift */; };
+		09DCD8B62819D04C004D51EF /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD52FA25B4555F00D751F2 /* FirebaseService.swift */; };
+		09DCD8B82819D1BD004D51EF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 09DCD8B72819D1BD004D51EF /* FirebaseAuth */; };
+		09DCD8B92819D21A004D51EF /* Graphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FB43F25D0887600D12456 /* Graphs.swift */; };
+		09DCD8BA2819D21A004D51EF /* AlertGas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD52EC25B39B9F00D751F2 /* AlertGas.swift */; };
+		09DCD8BB2819D225004D51EF /* GraphEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FB43D25D087AA00D12456 /* GraphEntry.swift */; };
+		09DCD8BD2819D40B004D51EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09DCD8BC2819D40B004D51EF /* GoogleService-Info.plist */; };
+		09DCD8C02819D517004D51EF /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 09DCD8BF2819D517004D51EF /* FirebaseDatabase */; };
+		09DCD8C6281A7781004D51EF /* MainWatchOSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DCD8C5281A7781004D51EF /* MainWatchOSViewModel.swift */; };
+		09DCD8CA281A8A4D004D51EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0906FD6825A3B430005B4992 /* Assets.xcassets */; };
+		09DCD8CB281A8A4E004D51EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0906FD6825A3B430005B4992 /* Assets.xcassets */; };
 		09F69E6C272D2356000996A2 /* FrequencySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F69E6B272D2356000996A2 /* FrequencySelectionView.swift */; };
 /* End PBXBuildFile section */
 
@@ -125,7 +137,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				0966585B27B739590073AB79 /* ethgas-watchos.app in Embed Watch Content */,
+				0966585B27B739590073AB79 /* ETHWatch Alerts.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,8 +181,7 @@
 		0961741E26C6FCA900683EBE /* HotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotViewModel.swift; sourceTree = "<group>"; };
 		0961742526C82FC600683EBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0961742826C82FCC00683EBE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		0966583827B738150073AB79 /* ethgas-ios copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ethgas-ios copy-Info.plist"; path = "/Users/marce/Documents/digitalGym/repo/blockchain/ethgas-ios/ethgas-ios copy-Info.plist"; sourceTree = "<absolute>"; };
-		0966583B27B739560073AB79 /* ethgas-watchos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ethgas-watchos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0966583B27B739560073AB79 /* ETHWatch Alerts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ETHWatch Alerts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0966583D27B739580073AB79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0966584327B739580073AB79 /* ethgas-watchos WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ethgas-watchos WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0966584A27B739580073AB79 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -201,6 +212,9 @@
 		09D2594926184FA100815117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09D2595726186A7D00815117 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09D259622618704000815117 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		09DCD8BC2819D40B004D51EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		09DCD8C5281A7781004D51EF /* MainWatchOSViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWatchOSViewModel.swift; sourceTree = "<group>"; };
+		09DCD8C9281A8954004D51EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		09F69E6B272D2356000996A2 /* FrequencySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequencySelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,8 +234,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09DCD8C02819D517004D51EF /* FirebaseDatabase in Frameworks */,
 				093A7E7A281549BD00593BE2 /* FirebaseDatabase in Frameworks */,
-				093A7E78281549BD00593BE2 /* FirebaseAuth in Frameworks */,
+				09DCD8B82819D1BD004D51EF /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +262,6 @@
 				0966584727B739580073AB79 /* ethgas-watchos WatchKit Extension */,
 				09D2593F26184FA000815117 /* Frameworks */,
 				0906FD6225A3B42D005B4992 /* Products */,
-				0966583827B738150073AB79 /* ethgas-ios copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -256,7 +270,7 @@
 			children = (
 				0906FD6125A3B42D005B4992 /* ethgas-ios.app */,
 				09D2593E26184FA000815117 /* appwidgetExtension.appex */,
-				0966583B27B739560073AB79 /* ethgas-watchos.app */,
+				0966583B27B739560073AB79 /* ETHWatch Alerts.app */,
 				0966584327B739580073AB79 /* ethgas-watchos WatchKit Extension.appex */,
 			);
 			name = Products;
@@ -374,6 +388,7 @@
 		0966583C27B739560073AB79 /* ethgas-watchos */ = {
 			isa = PBXGroup;
 			children = (
+				09DCD8C9281A8954004D51EF /* Info.plist */,
 				0966583D27B739580073AB79 /* Assets.xcassets */,
 			);
 			path = "ethgas-watchos";
@@ -383,6 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				0966584A27B739580073AB79 /* MainView.swift */,
+				09DCD8C5281A7781004D51EF /* MainWatchOSViewModel.swift */,
 				0966584C27B739580073AB79 /* NotificationController.swift */,
 				0966584E27B739580073AB79 /* NotificationView.swift */,
 				0966585027B739580073AB79 /* ComplicationController.swift */,
@@ -390,6 +406,7 @@
 				0966585727B739590073AB79 /* Info.plist */,
 				0966585827B739590073AB79 /* PushNotificationPayload.apns */,
 				093A7E752815494D00593BE2 /* watchextensionApp.swift */,
+				09DCD8BC2819D40B004D51EF /* GoogleService-Info.plist */,
 				0966585427B739590073AB79 /* Preview Content */,
 			);
 			path = "ethgas-watchos WatchKit Extension";
@@ -490,7 +507,7 @@
 			);
 			name = "ethgas-watchos";
 			productName = "ethgas-watchos";
-			productReference = 0966583B27B739560073AB79 /* ethgas-watchos.app */;
+			productReference = 0966583B27B739560073AB79 /* ETHWatch Alerts.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		0966584227B739580073AB79 /* ethgas-watchos WatchKit Extension */ = {
@@ -507,8 +524,9 @@
 			);
 			name = "ethgas-watchos WatchKit Extension";
 			packageProductDependencies = (
-				093A7E77281549BD00593BE2 /* FirebaseAuth */,
 				093A7E79281549BD00593BE2 /* FirebaseDatabase */,
+				09DCD8B72819D1BD004D51EF /* FirebaseAuth */,
+				09DCD8BF2819D517004D51EF /* FirebaseDatabase */,
 			);
 			productName = "ethgas-watchos WatchKit Extension";
 			productReference = 0966584327B739580073AB79 /* ethgas-watchos WatchKit Extension.appex */;
@@ -570,6 +588,7 @@
 			packageReferences = (
 				0906FD7425A3B56F005B4992 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				090FB43825CF327D00D12456 /* XCRemoteSwiftPackageReference "Charts" */,
+				09DCD8BE2819D517004D51EF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 0906FD6225A3B42D005B4992 /* Products */;
 			projectDirPath = "";
@@ -599,7 +618,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0966586627B742DC0073AB79 /* Assets.xcassets in Resources */,
+				09DCD8CA281A8A4D004D51EF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,8 +627,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0966585627B739590073AB79 /* Preview Assets.xcassets in Resources */,
-				0966586527B73C040073AB79 /* Assets.xcassets in Resources */,
+				09DCD8B32819CF09004D51EF /* Localizable.strings in Resources */,
+				09DCD8BD2819D40B004D51EF /* GoogleService-Info.plist in Resources */,
 				0966585327B739590073AB79 /* Assets.xcassets in Resources */,
+				09DCD8CB281A8A4E004D51EF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,11 +687,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09DCD8B92819D21A004D51EF /* Graphs.swift in Sources */,
 				093A7E762815494D00593BE2 /* watchextensionApp.swift in Sources */,
 				0966584D27B739580073AB79 /* NotificationController.swift in Sources */,
+				09DCD8B62819D04C004D51EF /* FirebaseService.swift in Sources */,
 				0966584B27B739580073AB79 /* MainView.swift in Sources */,
+				09DCD8BB2819D225004D51EF /* GraphEntry.swift in Sources */,
+				09DCD8C6281A7781004D51EF /* MainWatchOSViewModel.swift in Sources */,
+				09DCD8B52819D03E004D51EF /* CurrentData.swift in Sources */,
+				09DCD8B02819CE64004D51EF /* Resources.swift in Sources */,
+				09DCD8BA2819D21A004D51EF /* AlertGas.swift in Sources */,
 				0966585127B739580073AB79 /* ComplicationController.swift in Sources */,
 				0966584F27B739580073AB79 /* NotificationView.swift in Sources */,
+				09DCD8B12819CE67004D51EF /* Strings.swift in Sources */,
+				09DCD8B22819CE94004D51EF /* String+Localizable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -848,7 +878,7 @@
 				CODE_SIGN_ENTITLEMENTS = "ethgas-ios/ethgas-ios.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"ethgas-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = ZR272F7CTF;
 				ENABLE_PREVIEWS = YES;
@@ -858,7 +888,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -876,7 +906,7 @@
 				CODE_SIGN_ENTITLEMENTS = "ethgas-ios/ethgas-ios.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"ethgas-ios/Preview Content\"";
 				DEVELOPMENT_TEAM = ZR272F7CTF;
 				ENABLE_PREVIEWS = YES;
@@ -886,7 +916,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -900,8 +930,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"ethgas-watchos WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = ZR272F7CTF;
 				ENABLE_PREVIEWS = YES;
@@ -916,7 +947,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -933,8 +964,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"ethgas-watchos WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = ZR272F7CTF;
 				ENABLE_PREVIEWS = YES;
@@ -949,9 +982,10 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -967,19 +1001,20 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = ZR272F7CTF;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = ethgas_watchos_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = "ethgas-watchos";
+				INFOPLIST_FILE = "ethgas-watchos/Info.plist";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.mgarciate.ethgas;
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "ETHWatch Alerts";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -995,19 +1030,20 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = ZR272F7CTF;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = ethgas_watchos_WatchKit_Extension;
-				INFOPLIST_KEY_CFBundleDisplayName = "ethgas-watchos";
+				INFOPLIST_FILE = "ethgas-watchos/Info.plist";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.mgarciate.ethgas;
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "ETHWatch Alerts";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1024,7 +1060,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = ZR272F7CTF;
 				INFOPLIST_FILE = appwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -1033,7 +1069,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas.appwidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1049,7 +1085,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = ZR272F7CTF;
 				INFOPLIST_FILE = appwidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -1058,7 +1094,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas.appwidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1123,7 +1159,7 @@
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 7.3.1;
+				minimumVersion = 8.12.1;
 			};
 		};
 		090FB43825CF327D00D12456 /* XCRemoteSwiftPackageReference "Charts" */ = {
@@ -1132,6 +1168,14 @@
 			requirement = {
 				branch = master;
 				kind = branch;
+			};
+		};
+		09DCD8BE2819D517004D51EF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.12.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1157,17 +1201,22 @@
 			package = 090FB43825CF327D00D12456 /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = Charts;
 		};
-		093A7E77281549BD00593BE2 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0906FD7425A3B56F005B4992 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
 		093A7E79281549BD00593BE2 /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0906FD7425A3B56F005B4992 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
 		};
 		09D2595A26186EC500815117 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0906FD7425A3B56F005B4992 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		09DCD8B72819D1BD004D51EF /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0906FD7425A3B56F005B4992 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		09DCD8BF2819D517004D51EF /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0906FD7425A3B56F005B4992 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
