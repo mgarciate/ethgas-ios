@@ -64,6 +64,7 @@
 		09D14848284B6519009A6800 /* ItemFeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09852A172735B78000490B8A /* ItemFeeView.swift */; };
 		09D1484A284B6711009A6800 /* ItemFee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14849284B6711009A6800 /* ItemFee.swift */; };
 		09D1484B284B6711009A6800 /* ItemFee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14849284B6711009A6800 /* ItemFee.swift */; };
+		09D1484C284B6A8E009A6800 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD52F025B4435100D751F2 /* SignInWithAppleButton.swift */; };
 		09D2594126184FA000815117 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D2594026184FA000815117 /* WidgetKit.framework */; };
 		09D2594326184FA000815117 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D2594226184FA000815117 /* SwiftUI.framework */; };
 		09D2594626184FA000815117 /* appwidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D2594526184FA000815117 /* appwidget.swift */; };
@@ -866,6 +867,7 @@
 				09DCD8EC282EE004004D51EF /* HotView.swift in Sources */,
 				09DCD8F8282EFA5C004D51EF /* AlertsViewTests.swift in Sources */,
 				09D14845284B641D009A6800 /* FeesViewTests.swift in Sources */,
+				09D1484C284B6A8E009A6800 /* SignInWithAppleButton.swift in Sources */,
 				09DCD8DF282EC5BE004D51EF /* Strings.swift in Sources */,
 				09DCD8FA282EFC2F004D51EF /* FrequencySelectionViewTests.swift in Sources */,
 				09DCD8F3282EE32E004D51EF /* MainActionSheet.swift in Sources */,

@@ -31,6 +31,11 @@ class ethgas_iosTests: XCTestCase {
         let cardValueView = CardValueView(viewModel: CardValueViewModel(value: 30, color: .pink, title: Resources.Strings.Common.Speed.fastest.uppercased(), subtitle: Resources.Strings.Common.Speed.fastestSubtitle))
         assertSnapshot(matching: cardValueView, as: .image)
     }
+    
+    func testAppleSignInButton() throws {
+        let button = SignInWithAppleButton()
+        assertSnapshot(matching: button, as: .image)
+    }
 }
 
 extension SwiftUI.View {
