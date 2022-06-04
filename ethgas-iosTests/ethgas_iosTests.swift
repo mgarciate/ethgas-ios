@@ -7,7 +7,6 @@
 
 import XCTest
 import SnapshotTesting
-import SwiftUI
 
 class ethgas_iosTests: XCTestCase {
 
@@ -26,22 +25,18 @@ class ethgas_iosTests: XCTestCase {
         // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
         let itemAlertview = ItemAlertView(alert: AlertGas(value: 80, direction: AlertGasDirection.down, type: .standard, frequency: .once))
-        assertSnapshot(matching: itemAlertview, as: .image)
+        assertSnapshot(matching: itemAlertview, as: .image(layout: .fixed(width: 375, height: 50)))
         
-        let cardValueView = CardValueView(viewModel: CardValueViewModel(value: 30, color: .pink, title: Resources.Strings.Common.Speed.fastest.uppercased(), subtitle: Resources.Strings.Common.Speed.fastestSubtitle))
-        assertSnapshot(matching: cardValueView, as: .image)
+        let valueViewModel = CardValueViewModel(value: 30, color: .pink, title: Resources.Strings.Common.Speed.fastest.uppercased(), subtitle: Resources.Strings.Common.Speed.fastestSubtitle)
+        let cardValueView = CardValueView(viewModel: valueViewModel)
+        assertSnapshot(matching: cardValueView, as: .image(layout: .fixed(width: 375, height: 100)))
+        
+        let cardValueSmallView = CardValueSmallView(viewModel: valueViewModel)
+        assertSnapshot(matching: cardValueSmallView, as: .image(layout: .fixed(width: 100, height: 100)))
     }
     
     func testAppleSignInButton() throws {
         let button = SignInWithAppleButton()
         assertSnapshot(matching: button, as: .image)
-    }
-}
-
-extension SwiftUI.View {
-    func toVC() -> UIViewController {
-        let vc = UIHostingController(rootView: self)
-        vc.view.frame = UIScreen.main.bounds
-        return vc
     }
 }

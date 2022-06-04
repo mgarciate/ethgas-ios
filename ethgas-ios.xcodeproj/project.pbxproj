@@ -65,6 +65,13 @@
 		09D1484A284B6711009A6800 /* ItemFee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14849284B6711009A6800 /* ItemFee.swift */; };
 		09D1484B284B6711009A6800 /* ItemFee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14849284B6711009A6800 /* ItemFee.swift */; };
 		09D1484C284B6A8E009A6800 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD52F025B4435100D751F2 /* SignInWithAppleButton.swift */; };
+		09D1484E284B7C76009A6800 /* AlertsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1484D284B7C76009A6800 /* AlertsViewModelProtocol.swift */; };
+		09D1484F284B7C76009A6800 /* AlertsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1484D284B7C76009A6800 /* AlertsViewModelProtocol.swift */; };
+		09D14851284B7D15009A6800 /* AlertsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14850284B7D15009A6800 /* AlertsViewModel.swift */; };
+		09D14853284B7F6C009A6800 /* MockAlertsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14852284B7F6C009A6800 /* MockAlertsView.swift */; };
+		09D14854284B7F6C009A6800 /* MockAlertsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14852284B7F6C009A6800 /* MockAlertsView.swift */; };
+		09D14855284B82A1009A6800 /* AlertsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD52E825B393FD00D751F2 /* AlertsView.swift */; };
+		09D14857284B8D93009A6800 /* View+toVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14856284B8D93009A6800 /* View+toVC.swift */; };
 		09D2594126184FA000815117 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D2594026184FA000815117 /* WidgetKit.framework */; };
 		09D2594326184FA000815117 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D2594226184FA000815117 /* SwiftUI.framework */; };
 		09D2594626184FA000815117 /* appwidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D2594526184FA000815117 /* appwidget.swift */; };
@@ -244,6 +251,10 @@
 		09BD530025B467B800D751F2 /* DeviceToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceToken.swift; sourceTree = "<group>"; };
 		09D14844284B641D009A6800 /* FeesViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeesViewTests.swift; sourceTree = "<group>"; };
 		09D14849284B6711009A6800 /* ItemFee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFee.swift; sourceTree = "<group>"; };
+		09D1484D284B7C76009A6800 /* AlertsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewModelProtocol.swift; sourceTree = "<group>"; };
+		09D14850284B7D15009A6800 /* AlertsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewModel.swift; sourceTree = "<group>"; };
+		09D14852284B7F6C009A6800 /* MockAlertsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAlertsView.swift; sourceTree = "<group>"; };
+		09D14856284B8D93009A6800 /* View+toVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+toVC.swift"; sourceTree = "<group>"; };
 		09D2593E26184FA000815117 /* appwidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = appwidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D2594026184FA000815117 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		09D2594226184FA000815117 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -395,6 +406,7 @@
 				0933DC7826975FFC00559EB1 /* MainViewModel.swift */,
 				0961741826C6E90700683EBE /* CardValueViewModel.swift */,
 				0961741E26C6FCA900683EBE /* HotViewModel.swift */,
+				09D14850284B7D15009A6800 /* AlertsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -542,6 +554,7 @@
 			isa = PBXGroup;
 			children = (
 				09DCD8E8282EDEEE004D51EF /* HotViewModelProtocol.swift */,
+				09D1484D284B7C76009A6800 /* AlertsViewModelProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -550,6 +563,7 @@
 			isa = PBXGroup;
 			children = (
 				09DCD8EE282EE1EA004D51EF /* MockHotView.swift */,
+				09D14852284B7F6C009A6800 /* MockAlertsView.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -558,6 +572,7 @@
 			isa = PBXGroup;
 			children = (
 				09DCD8FC282EFC8E004D51EF /* TestUtils.swift */,
+				09D14856284B8D93009A6800 /* View+toVC.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -799,14 +814,17 @@
 				09DCD8F2282EE32E004D51EF /* MainActionSheet.swift in Sources */,
 				0961740426C6E2B800683EBE /* Resources.swift in Sources */,
 				09BD52F425B4447200D751F2 /* AuthenticationService.swift in Sources */,
+				09D14853284B7F6C009A6800 /* MockAlertsView.swift in Sources */,
 				09852A152735A93B00490B8A /* FeesView.swift in Sources */,
 				0961741926C6E90700683EBE /* CardValueViewModel.swift in Sources */,
 				09BD52FE25B4571D00D751F2 /* CurrentData.swift in Sources */,
 				0961741F26C6FCA900683EBE /* HotViewModel.swift in Sources */,
 				090FB43E25D087AA00D12456 /* GraphEntry.swift in Sources */,
 				09BD52E925B393FE00D751F2 /* AlertsView.swift in Sources */,
+				09D1484E284B7C76009A6800 /* AlertsViewModelProtocol.swift in Sources */,
 				09BD52FB25B4555F00D751F2 /* FirebaseService.swift in Sources */,
 				0933DC7926975FFC00559EB1 /* MainViewModel.swift in Sources */,
+				09D14851284B7D15009A6800 /* AlertsViewModel.swift in Sources */,
 				09BD52ED25B39B9F00D751F2 /* AlertGas.swift in Sources */,
 				090FB43C25CF379900D12456 /* ChartsView.swift in Sources */,
 				09BD530125B467B800D751F2 /* DeviceToken.swift in Sources */,
@@ -877,11 +895,15 @@
 				09DCD8F0282EE1EA004D51EF /* MockHotView.swift in Sources */,
 				09DCD8E5282ED0D3004D51EF /* CardValueViewModel.swift in Sources */,
 				09D14846284B645F009A6800 /* FeesView.swift in Sources */,
+				09D14857284B8D93009A6800 /* View+toVC.swift in Sources */,
 				09DCD8DD282EC53D004D51EF /* AlertGas.swift in Sources */,
 				09DCD8E4282ED0CD004D51EF /* CardValueView.swift in Sources */,
 				09DCD8F6282EF64E004D51EF /* HotViewTests.swift in Sources */,
 				09DCD8E6282ED387004D51EF /* FrequencySelectionView.swift in Sources */,
 				09D1484B284B6711009A6800 /* ItemFee.swift in Sources */,
+				09D14855284B82A1009A6800 /* AlertsView.swift in Sources */,
+				09D14854284B7F6C009A6800 /* MockAlertsView.swift in Sources */,
+				09D1484F284B7C76009A6800 /* AlertsViewModelProtocol.swift in Sources */,
 				09DCD8E0282EC5DC004D51EF /* String+Localizable.swift in Sources */,
 				09D14848284B6519009A6800 /* ItemFeeView.swift in Sources */,
 				09DCD8F4282EE36F004D51EF /* GraphEntry.swift in Sources */,

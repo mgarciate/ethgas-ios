@@ -18,6 +18,11 @@ class FeesViewTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+    func testItemFeeView() throws {
+        let view = ItemFeeView(data: ItemFee(title: "ETH Transfer", gasLimit: 21000, fastest: 100, fast: 50, average: 25, ethusd: 4000))
+        assertSnapshot(matching: view, as: .image(layout: .fixed(width: 375, height: 100)))
+    }
 
     func testFeesViewRegularScreen() throws {
         assertSnapshot(matching: viewController, as: .image(on: .iPhoneX))
