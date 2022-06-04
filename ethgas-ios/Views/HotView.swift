@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct HotView: View {
+struct HotView<ViewModel>: View where ViewModel: HotViewModelProtocol {
     @Binding var actionSheet: MainActionSheet?
-    @StateObject private var viewModel = HotViewModel()
+    @StateObject var viewModel: ViewModel
     
     @State private var isPopupPresented = false
     @State private var selectedEntry: HotEntry?
@@ -186,7 +186,7 @@ struct HotView: View {
 
 struct HotView_Previews: PreviewProvider {
     static var previews: some View {
-        HotView(actionSheet: .constant(.hot))
+        HotView<MockHotViewModel>(actionSheet: .constant(.hot), viewModel: MockHotViewModel())
     }
 }
 
