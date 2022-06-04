@@ -8,14 +8,6 @@
 import SwiftUI
 import AuthenticationServices
 
-enum MainActionSheet: Identifiable {
-    case alerts, graphs, hot, fees
-    
-    var id: Int {
-        hashValue
-    }
-}
-
 struct MainView: View {
     @StateObject var viewModel = MainViewModel()
     
@@ -163,12 +155,12 @@ struct MainView: View {
         .sheet(item: $actionSheet) { item in
             switch(item) {
             case .alerts:
-                AlertsView(currentData: $viewModel.currentData, actionSheet: $actionSheet, alertsData: AlertsGas.Data(alerts: []))
+                AlertsView(currentData: $viewModel.currentData, actionSheet: $actionSheet, viewModel: AlertsViewModel())
                     .navigationTitle(Resources.Strings.Alerts.title)
             case .graphs:
                 ChartsView(actionSheet: $actionSheet)
             case .hot:
-                HotView(actionSheet: $actionSheet)
+                HotView<HotViewModel>(actionSheet: $actionSheet, viewModel: HotViewModel())
             case .fees:
                 FeesView(currentData: $viewModel.currentData, actionSheet: $actionSheet)
             }

@@ -9,7 +9,7 @@ import FirebaseAuth
 import FirebaseDatabase
 import Combine
 
-final class HotViewModel: ObservableObject {
+final class HotViewModel: HotViewModelProtocol {
     let ref = Database.database().reference()
     @Published var hotEntries = [IndexPath: HotEntry?]()
     @Published var typeSelected = 1
@@ -95,6 +95,7 @@ final class HotViewModel: ObservableObject {
                 aux[IndexPath(row: hour, section: day)] = HotEntry(entry: entry, value: value, alpha: (Double(entry.fast - valueMin) / Double(valueMax - valueMin)))
             }
         }
+        print(aux)
         hotEntries = aux
         #if DEBUG
         print("*** \(hotEntries.count)")

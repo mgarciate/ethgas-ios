@@ -34,6 +34,12 @@
 "hot.popup.gasPrice" = "Gas费价格";
 "hot.popup.gwei" = "Gwei";
 
+// Fees screen
+"fees.ethtransfer" = "ETH Transfer";
+"fees.erc20transfer" = "ERC20 Transfer";
+"fees.swap" = "Uniswap Swap";
+"fees.addRemoveLP" = "Uniswap Add/Remove LP";
+
 // Widget
 "widget.configuration.description" = "本组件以Gwei单位显示当前值。";
 

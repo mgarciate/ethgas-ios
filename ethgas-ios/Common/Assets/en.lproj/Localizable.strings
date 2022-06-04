@@ -34,6 +34,12 @@
 "hot.popup.gasPrice" = "Gas price";
 "hot.popup.gwei" = "Gwei";
 
+// Fees screen
+"fees.ethtransfer" = "ETH Transfer";
+"fees.erc20transfer" = "ERC20 Transfer";
+"fees.swap" = "Uniswap Swap";
+"fees.addRemoveLP" = "Uniswap Add/Remove LP";
+
 // Widget
 "widget.configuration.description" = "This widget shows the current values in Gweis.";
 
