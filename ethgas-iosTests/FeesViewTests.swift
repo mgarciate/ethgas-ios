@@ -21,7 +21,7 @@ class FeesViewTests: XCTestCase {
     
     func testItemFeeView() throws {
         let view = ItemFeeView(data: ItemFee(title: "ETH Transfer", gasLimit: 21000, fastest: 100, fast: 50, average: 25, ethusd: 4000))
-        assertSnapshot(matching: view, as: .image(layout: .fixed(width: 375, height: 100)))
+        assertSnapshot(matching: view, as: .image(layout: .fixed(width: ViewImageConfig.iPhoneX.size!.width, height: 100)))
     }
 
     func testFeesViewRegularScreen() throws {

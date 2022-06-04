@@ -19,6 +19,11 @@ class AlertsViewTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+    func testItemAlertView() throws {
+        let itemAlertview = ItemAlertView(alert: AlertGas(value: 80, direction: AlertGasDirection.down, type: .standard, frequency: .once))
+        assertSnapshot(matching: itemAlertview, as: .image(layout: .fixed(width: ViewImageConfig.iPhoneX.size!.width, height: 50)))
+    }
 
     func testAlertsViewRegularScreen() throws {
         assertSnapshot(matching: viewController, as: .image(on: .iPhoneX))
