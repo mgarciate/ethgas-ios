@@ -25,7 +25,7 @@ struct CurrentData {
 
 extension CurrentData {
     static var dummyData: CurrentData {
-        return CurrentData(id: 0, timestamp: 0, ethusd: 0, blockNum: 0, fastest: 0, fast: 0, average: 0, averageMax24h: 0, averageMin24h: 0, fastMax24h: 0, fastMin24h: 0, fastestMax24h: 0, fastestMin24h: 0)
+        return CurrentData(id: 1654337100, timestamp: 1654337100, ethusd: 1775.72, blockNum: 14902669, fastest: 48, fast: 37, average: 26, averageMax24h: 27, averageMin24h: 25, fastMax24h: 38, fastMin24h: 36, fastestMax24h: 49, fastestMin24h: 47)
     }
     
     var dateString: String {
