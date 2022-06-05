@@ -7,24 +7,6 @@
 
 import SwiftUI
 
-protocol DateProviderService {
-    var today: Date { get }
-    var timeZone: TimeZone { get }
-    var locale: Locale { get }
-}
-
-final class DateProvider: DateProviderService {
-    var today: Date = Date()
-    var timeZone: TimeZone = TimeZone.current
-    var locale: Locale = Locale.current
-}
-
-final class MockDateProvider: DateProviderService {
-    var today: Date = Date()
-    var timeZone: TimeZone = TimeZone.current
-    var locale: Locale = Locale.current
-}
-
 struct HotView<ViewModel>: View where ViewModel: HotViewModelProtocol {
     @Binding var actionSheet: MainActionSheet?
     @StateObject var viewModel: ViewModel

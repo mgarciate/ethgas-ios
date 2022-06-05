@@ -18,13 +18,27 @@ class MainViewTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testMainUnsigned() throws {
+    func testMainUnsignedRegularScreen() throws {
         let viewController = MainView<MockMainViewModel, MockAlertsViewModel, MockHotViewModel, MockChartsViewModel>(viewModel: MockMainViewModel(isSignedIn: true), alertsViewModel: MockAlertsViewModel(), hotViewModel: MockHotViewModel(), chartsViewModel: MockChartsViewModel()).toVC()
         assertSnapshot(matching: viewController, as: .image(on: .iPhoneX))
+        assertSnapshot(matching: viewController, as: .image(on: .iPhoneX, traits: traitDarkMode))
     }
     
-    func testMainSigned() throws {
+    func testMainUnsignedLargeScreen() throws {
+        let viewController = MainView<MockMainViewModel, MockAlertsViewModel, MockHotViewModel, MockChartsViewModel>(viewModel: MockMainViewModel(isSignedIn: true), alertsViewModel: MockAlertsViewModel(), hotViewModel: MockHotViewModel(), chartsViewModel: MockChartsViewModel()).toVC()
+        assertSnapshot(matching: viewController, as: .image(on: .iPhoneXsMax))
+        assertSnapshot(matching: viewController, as: .image(on: .iPhoneXsMax, traits: traitDarkMode))
+    }
+    
+    func testMainSignedRegularScreen() throws {
         let viewController = MainView<MockMainViewModel, MockAlertsViewModel, MockHotViewModel, MockChartsViewModel>(viewModel: MockMainViewModel(isSignedIn: false), alertsViewModel: MockAlertsViewModel(), hotViewModel: MockHotViewModel(), chartsViewModel: MockChartsViewModel()).toVC()
         assertSnapshot(matching: viewController, as: .image(on: .iPhoneX))
+        assertSnapshot(matching: viewController, as: .image(on: .iPhoneX, traits: traitDarkMode))
+    }
+    
+    func testMainSignedLargeScreen() throws {
+        let viewController = MainView<MockMainViewModel, MockAlertsViewModel, MockHotViewModel, MockChartsViewModel>(viewModel: MockMainViewModel(isSignedIn: false), alertsViewModel: MockAlertsViewModel(), hotViewModel: MockHotViewModel(), chartsViewModel: MockChartsViewModel()).toVC()
+        assertSnapshot(matching: viewController, as: .image(on: .iPhoneXsMax))
+        assertSnapshot(matching: viewController, as: .image(on: .iPhoneXsMax, traits: traitDarkMode))
     }
 }

@@ -86,6 +86,11 @@
 		09D14869284C7E3B009A6800 /* MockChartsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14868284C7E3B009A6800 /* MockChartsViewModel.swift */; };
 		09D1486A284C7E3B009A6800 /* MockChartsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14868284C7E3B009A6800 /* MockChartsViewModel.swift */; };
 		09D1486C284C808E009A6800 /* ChartsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1486B284C808E009A6800 /* ChartsViewTests.swift */; };
+		09D14870284D07A7009A6800 /* MockDateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1486F284D07A7009A6800 /* MockDateProvider.swift */; };
+		09D14871284D07A7009A6800 /* MockDateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1486F284D07A7009A6800 /* MockDateProvider.swift */; };
+		09D14873284D0D75009A6800 /* DateProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14872284D0D75009A6800 /* DateProviderService.swift */; };
+		09D14876284D0E2C009A6800 /* DateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14875284D0E2C009A6800 /* DateProvider.swift */; };
+		09D14878284D0EB7009A6800 /* DateProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14872284D0D75009A6800 /* DateProviderService.swift */; };
 		09D2594126184FA000815117 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D2594026184FA000815117 /* WidgetKit.framework */; };
 		09D2594326184FA000815117 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D2594226184FA000815117 /* SwiftUI.framework */; };
 		09D2594626184FA000815117 /* appwidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D2594526184FA000815117 /* appwidget.swift */; };
@@ -276,6 +281,9 @@
 		09D14865284C7CFC009A6800 /* ChartsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewModelProtocol.swift; sourceTree = "<group>"; };
 		09D14868284C7E3B009A6800 /* MockChartsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockChartsViewModel.swift; sourceTree = "<group>"; };
 		09D1486B284C808E009A6800 /* ChartsViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewTests.swift; sourceTree = "<group>"; };
+		09D1486F284D07A7009A6800 /* MockDateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDateProvider.swift; sourceTree = "<group>"; };
+		09D14872284D0D75009A6800 /* DateProviderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateProviderService.swift; sourceTree = "<group>"; };
+		09D14875284D0E2C009A6800 /* DateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateProvider.swift; sourceTree = "<group>"; };
 		09D2593E26184FA000815117 /* appwidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = appwidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D2594026184FA000815117 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		09D2594226184FA000815117 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -439,6 +447,7 @@
 				096173FC26C6E21300683EBE /* Assets */,
 				096173FD26C6E21B00683EBE /* Resources */,
 				0961740B26C6E31C00683EBE /* Extensions */,
+				09D1486D284D06FA009A6800 /* Dates */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -536,6 +545,24 @@
 				09D14849284B6711009A6800 /* ItemFee.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		09D1486D284D06FA009A6800 /* Dates */ = {
+			isa = PBXGroup;
+			children = (
+				09D1486E284D070C009A6800 /* Mocks */,
+				09D14872284D0D75009A6800 /* DateProviderService.swift */,
+				09D14875284D0E2C009A6800 /* DateProvider.swift */,
+			);
+			path = Dates;
+			sourceTree = "<group>";
+		};
+		09D1486E284D070C009A6800 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				09D1486F284D07A7009A6800 /* MockDateProvider.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		09D2593F26184FA000815117 /* Frameworks */ = {
@@ -841,10 +868,13 @@
 				0961740826C6E2CF00683EBE /* Strings.swift in Sources */,
 				0961740D26C6E34600683EBE /* String+Localizable.swift in Sources */,
 				0933DC7D2697627600559EB1 /* HotEntry.swift in Sources */,
+				09D14876284D0E2C009A6800 /* DateProvider.swift in Sources */,
+				09D14873284D0D75009A6800 /* DateProviderService.swift in Sources */,
 				09BD52F825B4476D00D751F2 /* EnvironmentKeys.swift in Sources */,
 				09DCD8F2282EE32E004D51EF /* MainActionSheet.swift in Sources */,
 				0961740426C6E2B800683EBE /* Resources.swift in Sources */,
 				09BD52F425B4447200D751F2 /* AuthenticationService.swift in Sources */,
+				09D14870284D07A7009A6800 /* MockDateProvider.swift in Sources */,
 				09D14853284B7F6C009A6800 /* MockAlertsView.swift in Sources */,
 				09852A152735A93B00490B8A /* FeesView.swift in Sources */,
 				0961741926C6E90700683EBE /* CardValueViewModel.swift in Sources */,
@@ -938,8 +968,10 @@
 				09D14857284B8D93009A6800 /* View+toVC.swift in Sources */,
 				09DCD8DD282EC53D004D51EF /* AlertGas.swift in Sources */,
 				09DCD8E4282ED0CD004D51EF /* CardValueView.swift in Sources */,
+				09D14871284D07A7009A6800 /* MockDateProvider.swift in Sources */,
 				09DCD8F6282EF64E004D51EF /* HotViewTests.swift in Sources */,
 				09DCD8E6282ED387004D51EF /* FrequencySelectionView.swift in Sources */,
+				09D14878284D0EB7009A6800 /* DateProviderService.swift in Sources */,
 				09D1484B284B6711009A6800 /* ItemFee.swift in Sources */,
 				09D14855284B82A1009A6800 /* AlertsView.swift in Sources */,
 				09D14854284B7F6C009A6800 /* MockAlertsView.swift in Sources */,
