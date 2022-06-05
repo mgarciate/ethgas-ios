@@ -7,6 +7,24 @@
 
 import SwiftUI
 
+protocol DateProviderService {
+    var today: Date { get }
+    var timeZone: TimeZone { get }
+    var locale: Locale { get }
+}
+
+final class DateProvider: DateProviderService {
+    var today: Date = Date()
+    var timeZone: TimeZone = TimeZone.current
+    var locale: Locale = Locale.current
+}
+
+final class MockDateProvider: DateProviderService {
+    var today: Date = Date()
+    var timeZone: TimeZone = TimeZone.current
+    var locale: Locale = Locale.current
+}
+
 struct HotView<ViewModel>: View where ViewModel: HotViewModelProtocol {
     @Binding var actionSheet: MainActionSheet?
     @StateObject var viewModel: ViewModel
@@ -175,11 +193,11 @@ struct HotView<ViewModel>: View where ViewModel: HotViewModelProtocol {
     }
     
     private func startDate() -> String {
-        guard let date = Calendar.current.date(byAdding: .day, value: -6, to: Date()) else { return "" }
+        guard let date = Calendar.current.date(byAdding: .day, value: -6, to: viewModel.dateProvider.today) else { return "" }
         let dateFormatter = DateFormatter()
-        dateFormatter.timeZone = TimeZone.current //Set timezone that you want
-        dateFormatter.locale = NSLocale.current
-        dateFormatter.dateFormat = "MMM dd" //Specify your format that you want
+        dateFormatter.timeZone = viewModel.dateProvider.timeZone
+        dateFormatter.locale = viewModel.dateProvider.locale
+        dateFormatter.dateFormat = "MMM dd"
         return dateFormatter.string(from: date)
     }
 }

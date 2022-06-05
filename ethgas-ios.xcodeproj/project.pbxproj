@@ -72,6 +72,20 @@
 		09D14854284B7F6C009A6800 /* MockAlertsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14852284B7F6C009A6800 /* MockAlertsView.swift */; };
 		09D14855284B82A1009A6800 /* AlertsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD52E825B393FD00D751F2 /* AlertsView.swift */; };
 		09D14857284B8D93009A6800 /* View+toVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14856284B8D93009A6800 /* View+toVC.swift */; };
+		09D14859284BC705009A6800 /* MainViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14858284BC705009A6800 /* MainViewModelProtocol.swift */; };
+		09D1485A284BC705009A6800 /* MainViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14858284BC705009A6800 /* MainViewModelProtocol.swift */; };
+		09D1485C284BC857009A6800 /* MockMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1485B284BC857009A6800 /* MockMainViewModel.swift */; };
+		09D1485D284BC857009A6800 /* MockMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1485B284BC857009A6800 /* MockMainViewModel.swift */; };
+		09D1485F284BC9B5009A6800 /* MainViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1485E284BC9B5009A6800 /* MainViewTests.swift */; };
+		09D14860284BC9FF009A6800 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0906FD6625A3B42D005B4992 /* MainView.swift */; };
+		09D14861284C79FD009A6800 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FB43B25CF379900D12456 /* ChartsView.swift */; };
+		09D14862284C7B2F009A6800 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FB42A25CF2FD200D12456 /* LineView.swift */; };
+		09D14864284C7C5B009A6800 /* ChartsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14863284C7C5B009A6800 /* ChartsViewModel.swift */; };
+		09D14866284C7CFC009A6800 /* ChartsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14865284C7CFC009A6800 /* ChartsViewModelProtocol.swift */; };
+		09D14867284C7CFC009A6800 /* ChartsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14865284C7CFC009A6800 /* ChartsViewModelProtocol.swift */; };
+		09D14869284C7E3B009A6800 /* MockChartsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14868284C7E3B009A6800 /* MockChartsViewModel.swift */; };
+		09D1486A284C7E3B009A6800 /* MockChartsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14868284C7E3B009A6800 /* MockChartsViewModel.swift */; };
+		09D1486C284C808E009A6800 /* ChartsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1486B284C808E009A6800 /* ChartsViewTests.swift */; };
 		09D2594126184FA000815117 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D2594026184FA000815117 /* WidgetKit.framework */; };
 		09D2594326184FA000815117 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D2594226184FA000815117 /* SwiftUI.framework */; };
 		09D2594626184FA000815117 /* appwidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D2594526184FA000815117 /* appwidget.swift */; };
@@ -255,6 +269,13 @@
 		09D14850284B7D15009A6800 /* AlertsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewModel.swift; sourceTree = "<group>"; };
 		09D14852284B7F6C009A6800 /* MockAlertsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAlertsView.swift; sourceTree = "<group>"; };
 		09D14856284B8D93009A6800 /* View+toVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+toVC.swift"; sourceTree = "<group>"; };
+		09D14858284BC705009A6800 /* MainViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelProtocol.swift; sourceTree = "<group>"; };
+		09D1485B284BC857009A6800 /* MockMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainViewModel.swift; sourceTree = "<group>"; };
+		09D1485E284BC9B5009A6800 /* MainViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTests.swift; sourceTree = "<group>"; };
+		09D14863284C7C5B009A6800 /* ChartsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewModel.swift; sourceTree = "<group>"; };
+		09D14865284C7CFC009A6800 /* ChartsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewModelProtocol.swift; sourceTree = "<group>"; };
+		09D14868284C7E3B009A6800 /* MockChartsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockChartsViewModel.swift; sourceTree = "<group>"; };
+		09D1486B284C808E009A6800 /* ChartsViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewTests.swift; sourceTree = "<group>"; };
 		09D2593E26184FA000815117 /* appwidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = appwidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D2594026184FA000815117 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		09D2594226184FA000815117 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -357,10 +378,10 @@
 				09BD52EB25B39B8500D751F2 /* Models */,
 				0906FD8E25A4670E005B4992 /* ethgas-ios.entitlements */,
 				0906FD6425A3B42D005B4992 /* ethgas_iosApp.swift */,
+				0906FD7C25A3B66F005B4992 /* AppDelegate.swift */,
 				0906FD6825A3B430005B4992 /* Assets.xcassets */,
 				0906FD6D25A3B430005B4992 /* Info.plist */,
 				0906FD6A25A3B430005B4992 /* Preview Content */,
-				0906FD7C25A3B66F005B4992 /* AppDelegate.swift */,
 			);
 			path = "ethgas-ios";
 			sourceTree = "<group>";
@@ -407,6 +428,7 @@
 				0961741826C6E90700683EBE /* CardValueViewModel.swift */,
 				0961741E26C6FCA900683EBE /* HotViewModel.swift */,
 				09D14850284B7D15009A6800 /* AlertsViewModel.swift */,
+				09D14863284C7C5B009A6800 /* ChartsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -542,10 +564,12 @@
 			children = (
 				09DCD8FB282EFC6D004D51EF /* Common */,
 				09DCD8D2282EC32B004D51EF /* ethgas_iosTests.swift */,
+				09D1485E284BC9B5009A6800 /* MainViewTests.swift */,
 				09DCD8F5282EF64E004D51EF /* HotViewTests.swift */,
 				09DCD8F7282EFA5C004D51EF /* AlertsViewTests.swift */,
 				09DCD8F9282EFC2F004D51EF /* FrequencySelectionViewTests.swift */,
 				09D14844284B641D009A6800 /* FeesViewTests.swift */,
+				09D1486B284C808E009A6800 /* ChartsViewTests.swift */,
 			);
 			path = "ethgas-iosTests";
 			sourceTree = "<group>";
@@ -553,8 +577,10 @@
 		09DCD8E7282EDECA004D51EF /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				09D14858284BC705009A6800 /* MainViewModelProtocol.swift */,
 				09DCD8E8282EDEEE004D51EF /* HotViewModelProtocol.swift */,
 				09D1484D284B7C76009A6800 /* AlertsViewModelProtocol.swift */,
+				09D14865284C7CFC009A6800 /* ChartsViewModelProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -562,8 +588,10 @@
 		09DCD8ED282EE1CE004D51EF /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				09D1485B284BC857009A6800 /* MockMainViewModel.swift */,
 				09DCD8EE282EE1EA004D51EF /* MockHotView.swift */,
 				09D14852284B7F6C009A6800 /* MockAlertsView.swift */,
+				09D14868284C7E3B009A6800 /* MockChartsViewModel.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -802,10 +830,13 @@
 				0961741C26C6F04900683EBE /* ItemAlertView.swift in Sources */,
 				0961741526C6E8E700683EBE /* CardValueView.swift in Sources */,
 				09DCD8E9282EDEEE004D51EF /* HotViewModelProtocol.swift in Sources */,
+				09D14859284BC705009A6800 /* MainViewModelProtocol.swift in Sources */,
+				09D14864284C7C5B009A6800 /* ChartsViewModel.swift in Sources */,
 				09852A182735B78000490B8A /* ItemFeeView.swift in Sources */,
 				09F69E6C272D2356000996A2 /* FrequencySelectionView.swift in Sources */,
 				0906FD7D25A3B66F005B4992 /* AppDelegate.swift in Sources */,
 				09852A1B2735BF2900490B8A /* CardValueSmallView.swift in Sources */,
+				09D14869284C7E3B009A6800 /* MockChartsViewModel.swift in Sources */,
 				090FB42B25CF2FD200D12456 /* LineView.swift in Sources */,
 				0961740826C6E2CF00683EBE /* Strings.swift in Sources */,
 				0961740D26C6E34600683EBE /* String+Localizable.swift in Sources */,
@@ -832,6 +863,8 @@
 				090FB44025D0887600D12456 /* Graphs.swift in Sources */,
 				09BD52F125B4435100D751F2 /* SignInWithAppleButton.swift in Sources */,
 				09DCD8EF282EE1EA004D51EF /* MockHotView.swift in Sources */,
+				09D14866284C7CFC009A6800 /* ChartsViewModelProtocol.swift in Sources */,
+				09D1485C284BC857009A6800 /* MockMainViewModel.swift in Sources */,
 				09B0C21C260A3D2E00C73CB6 /* HotView.swift in Sources */,
 				0906FD6525A3B42D005B4992 /* ethgas_iosApp.swift in Sources */,
 				09D1484A284B6711009A6800 /* ItemFee.swift in Sources */,
@@ -881,18 +914,25 @@
 				09DCD8DC282EC52A004D51EF /* ItemAlertView.swift in Sources */,
 				09DCD8EB282EDFFF004D51EF /* HotEntry.swift in Sources */,
 				09DCD8FD282EFC8E004D51EF /* TestUtils.swift in Sources */,
+				09D1485D284BC857009A6800 /* MockMainViewModel.swift in Sources */,
 				09DCD8DE282EC5B2004D51EF /* Resources.swift in Sources */,
 				09DCD8EC282EE004004D51EF /* HotView.swift in Sources */,
+				09D14861284C79FD009A6800 /* ChartsView.swift in Sources */,
 				09DCD8F8282EFA5C004D51EF /* AlertsViewTests.swift in Sources */,
 				09D14845284B641D009A6800 /* FeesViewTests.swift in Sources */,
 				09D1484C284B6A8E009A6800 /* SignInWithAppleButton.swift in Sources */,
 				09DCD8DF282EC5BE004D51EF /* Strings.swift in Sources */,
+				09D14860284BC9FF009A6800 /* MainView.swift in Sources */,
 				09DCD8FA282EFC2F004D51EF /* FrequencySelectionViewTests.swift in Sources */,
 				09DCD8F3282EE32E004D51EF /* MainActionSheet.swift in Sources */,
 				09DCD8E3282ECF04004D51EF /* CurrentData.swift in Sources */,
+				09D1485A284BC705009A6800 /* MainViewModelProtocol.swift in Sources */,
+				09D1486C284C808E009A6800 /* ChartsViewTests.swift in Sources */,
 				09DCD8D3282EC32B004D51EF /* ethgas_iosTests.swift in Sources */,
 				09D14847284B6508009A6800 /* CardValueSmallView.swift in Sources */,
 				09DCD8F0282EE1EA004D51EF /* MockHotView.swift in Sources */,
+				09D14867284C7CFC009A6800 /* ChartsViewModelProtocol.swift in Sources */,
+				09D1486A284C7E3B009A6800 /* MockChartsViewModel.swift in Sources */,
 				09DCD8E5282ED0D3004D51EF /* CardValueViewModel.swift in Sources */,
 				09D14846284B645F009A6800 /* FeesView.swift in Sources */,
 				09D14857284B8D93009A6800 /* View+toVC.swift in Sources */,
@@ -903,7 +943,9 @@
 				09D1484B284B6711009A6800 /* ItemFee.swift in Sources */,
 				09D14855284B82A1009A6800 /* AlertsView.swift in Sources */,
 				09D14854284B7F6C009A6800 /* MockAlertsView.swift in Sources */,
+				09D1485F284BC9B5009A6800 /* MainViewTests.swift in Sources */,
 				09D1484F284B7C76009A6800 /* AlertsViewModelProtocol.swift in Sources */,
+				09D14862284C7B2F009A6800 /* LineView.swift in Sources */,
 				09DCD8E0282EC5DC004D51EF /* String+Localizable.swift in Sources */,
 				09D14848284B6519009A6800 /* ItemFeeView.swift in Sources */,
 				09DCD8F4282EE36F004D51EF /* GraphEntry.swift in Sources */,
