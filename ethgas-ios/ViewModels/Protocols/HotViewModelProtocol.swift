@@ -10,6 +10,7 @@ import Foundation
 protocol HotViewModelProtocol: ObservableObject {
     var hotEntries: [IndexPath: HotEntry?] { get set }
     var typeSelected: Int { get set }
+    var dateProvider: DateProviderService { get }
     
     func removeObserver()
     func fetchData()
