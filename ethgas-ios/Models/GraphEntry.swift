@@ -41,4 +41,13 @@ extension GraphEntry {
         let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
         return Calendar.current.dateComponents([.hour], from: date).hour
     }
+    
+    var weekdayAbbreviated: String? {
+        let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.locale = Locale(identifier: "en-US")
+        dateFormatter.dateFormat = "EEE"
+        return String(dateFormatter.string(from: date).prefix(2))
+    }
 }
