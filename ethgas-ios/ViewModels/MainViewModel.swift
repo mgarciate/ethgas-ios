@@ -7,11 +7,15 @@
 
 import FirebaseAuth
 import WidgetKit
+import SwiftUI
 
-final class MainViewModel: ObservableObject {
+final class MainViewModel: MainViewModelProtocol {
     @Published var currentData: CurrentData = CurrentData.dummyData
     @Published var isSignedIn = false
     @Published var isMigrationAlertPresented = false
+    @Environment(\.window) var window: UIWindow?
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    private var signInHandler: SignInWithAppleCoordinator?
     private let firebaseService: FirebaseService = FirebaseServiceImpl()
     
     init() {
@@ -70,6 +74,16 @@ final class MainViewModel: ObservableObject {
             case .failure(let error):
                 print(error.localizedDescription)
             }
+        }
+    }
+    
+    func signInWithAppleButtonTapped() {
+        signInHandler = SignInWithAppleCoordinator(window: window)
+        signInHandler?.signIn { (user) in
+            #if DEBUG
+            print("User signed in \(user.uid)")
+            #endif
+            self.presentationMode.wrappedValue.dismiss() // (3)
         }
     }
     

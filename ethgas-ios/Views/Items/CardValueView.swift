@@ -34,3 +34,10 @@ struct CardValueView: View {
         .cornerRadius(20)
     }
 }
+
+struct CardValueView_Previews: PreviewProvider {
+    static var previews: some View {
+        CardValueView(viewModel: CardValueViewModel(value: 100, color: .blue, title: "FASTEST", subtitle: "< ASAP"))
+            .previewLayout(.fixed(width: 350, height: 100))
+    }
+}

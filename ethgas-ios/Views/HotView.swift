@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct HotView: View {
+struct HotView<ViewModel>: View where ViewModel: HotViewModelProtocol {
     @Binding var actionSheet: MainActionSheet?
-    @StateObject private var viewModel = HotViewModel()
+    @StateObject var viewModel: ViewModel
     
     @State private var isPopupPresented = false
     @State private var selectedEntry: HotEntry?
@@ -18,6 +18,11 @@ struct HotView: View {
         GridItem(.fixed(50)),
         GridItem(.fixed(50))
     ]
+    private let weekdayFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEE"
+        return formatter
+    }()
     
     var body: some View {
         ZStack {
@@ -59,13 +64,16 @@ struct HotView: View {
                     ScrollView(.vertical, showsIndicators: false) {
                         VStack(spacing: 1) {
                             HStack(spacing: 1) {
-                                Text("")
+                                Spacer()
                                     .frame(width: 60)
-                                Text("\(startDate())")
-                                Rectangle()
-                                    .frame(height: 1)
-                                    .padding(.horizontal, 5)
+                                ForEach((1..<7).reversed(), id: \.self) { j in
+                                    Text(viewModel.hotEntries[IndexPath(row: 0, section: j)]??.entry.weekdayAbbreviated ?? "")
+                                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 20, maxHeight: 20)
+                                        .minimumScaleFactor(0.8)
+                                }
                                 Text(Resources.Strings.Hot.today)
+                                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 20, maxHeight: 20)
+                                    .minimumScaleFactor(0.8)
                             }
                             ForEach(0..<24, id: \.self) { index in
                                 HStack(spacing: 1) {
@@ -95,13 +103,16 @@ struct HotView: View {
                                 }
                             }
                             HStack(spacing: 1) {
-                                Text("")
+                                Spacer()
                                     .frame(width: 60)
-                                Text("\(startDate())")
-                                Rectangle()
-                                    .frame(height: 1)
-                                    .padding(.horizontal, 5)
+                                ForEach((1..<7).reversed(), id: \.self) { j in
+                                    Text(viewModel.hotEntries[IndexPath(row: 0, section: j)]??.entry.weekdayAbbreviated ?? "")
+                                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 20, maxHeight: 20)
+                                        .minimumScaleFactor(0.8)
+                                }
                                 Text(Resources.Strings.Hot.today)
+                                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 20, maxHeight: 20)
+                                    .minimumScaleFactor(0.8)
                             }
                         }
                         .padding([.horizontal, .bottom], 10)
@@ -175,18 +186,18 @@ struct HotView: View {
     }
     
     private func startDate() -> String {
-        guard let date = Calendar.current.date(byAdding: .day, value: -6, to: Date()) else { return "" }
+        guard let date = Calendar.current.date(byAdding: .day, value: -6, to: viewModel.dateProvider.today) else { return "" }
         let dateFormatter = DateFormatter()
-        dateFormatter.timeZone = TimeZone.current //Set timezone that you want
-        dateFormatter.locale = NSLocale.current
-        dateFormatter.dateFormat = "MMM dd" //Specify your format that you want
+        dateFormatter.timeZone = viewModel.dateProvider.timeZone
+        dateFormatter.locale = viewModel.dateProvider.locale
+        dateFormatter.dateFormat = "MMM dd"
         return dateFormatter.string(from: date)
     }
 }
 
 struct HotView_Previews: PreviewProvider {
     static var previews: some View {
-        HotView(actionSheet: .constant(.hot))
+        HotView<MockHotViewModel>(actionSheet: .constant(.hot), viewModel: MockHotViewModel())
     }
 }
 

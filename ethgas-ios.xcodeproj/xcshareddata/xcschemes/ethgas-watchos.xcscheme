@@ -56,10 +56,8 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       notificationPayloadFile = "ethgas-watchos WatchKit Extension/PushNotificationPayload.apns">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/(null)">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0966583A27B739560073AB79"
@@ -67,7 +65,7 @@
             BlueprintName = "ethgas-watchos"
             ReferencedContainer = "container:ethgas-ios.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -75,10 +73,8 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/(null)">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0966583A27B739560073AB79"
@@ -86,16 +82,7 @@
             BlueprintName = "ethgas-watchos"
             ReferencedContainer = "container:ethgas-ios.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0966583A27B739560073AB79"
-            BuildableName = "ETHWatch Alerts.app"
-            BlueprintName = "ethgas-watchos"
-            ReferencedContainer = "container:ethgas-ios.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

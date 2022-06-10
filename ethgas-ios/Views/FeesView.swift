@@ -51,16 +51,16 @@ struct FeesView: View {
                 .padding(10)
                 VStack {
                     VStack {
-                        ItemFeeView(title: "ETH Transfer", gasLimit: 21000, fastest: currentData.fastest, fast: currentData.fast, average: currentData.average, ethusd: currentData.ethusd)
+                        ItemFeeView(data: ItemFee(title: Resources.Strings.Fees.ethTransfer, gasLimit: 21000, fastest: currentData.fastest, fast: currentData.fast, average: currentData.average, ethusd: currentData.ethusd))
                         Spacer()
                             .frame(height: 20)
-                        ItemFeeView(title: "ERC20 Transfer", gasLimit: 65000, fastest: currentData.fastest, fast: currentData.fast, average: currentData.average, ethusd: currentData.ethusd)
+                        ItemFeeView(data: ItemFee(title: Resources.Strings.Fees.erc20Transfer, gasLimit: 65000, fastest: currentData.fastest, fast: currentData.fast, average: currentData.average, ethusd: currentData.ethusd))
                         Spacer()
                             .frame(height: 20)
-                        ItemFeeView(title: "Uniswap Swap", gasLimit: 200000, fastest: currentData.fastest, fast: currentData.fast, average: currentData.average, ethusd: currentData.ethusd)
+                        ItemFeeView(data: ItemFee(title: Resources.Strings.Fees.swap, gasLimit: 200000, fastest: currentData.fastest, fast: currentData.fast, average: currentData.average, ethusd: currentData.ethusd))
                         Spacer()
                             .frame(height: 20)
-                        ItemFeeView(title: "Uniswap Add/Remove LP", gasLimit: 175000, fastest: currentData.fastest, fast: currentData.fast, average: currentData.average, ethusd: currentData.ethusd)
+                        ItemFeeView(data: ItemFee(title: Resources.Strings.Fees.addRemoveLP, gasLimit: 175000, fastest: currentData.fastest, fast: currentData.fast, average: currentData.average, ethusd: currentData.ethusd))
                     }
                     Spacer()
                 }

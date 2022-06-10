@@ -58,6 +58,13 @@ extension Resources.Strings {
         }
     }
     
+    struct Fees {
+        static let ethTransfer = "fees.ethtransfer".localized
+        static let erc20Transfer = "fees.erc20transfer".localized
+        static let swap = "fees.swap".localized
+        static let addRemoveLP = "fees.addRemoveLP".localized
+    }
+    
     struct Widget {
         static let description = "widget.configuration.description".localized
     }

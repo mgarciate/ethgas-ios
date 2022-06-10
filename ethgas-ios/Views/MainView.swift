@@ -8,21 +8,12 @@
 import SwiftUI
 import AuthenticationServices
 
-enum MainActionSheet: Identifiable {
-    case alerts, graphs, hot, fees
-    
-    var id: Int {
-        hashValue
-    }
-}
-
-struct MainView: View {
-    @StateObject var viewModel = MainViewModel()
-    
-    @Environment(\.window) var window: UIWindow?
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State var signInHandler: SignInWithAppleCoordinator?
+struct MainView<ViewModel, AlertsViewModel, HotViewModel, ChartsViewModel>: View where ViewModel: MainViewModelProtocol, AlertsViewModel: AlertsViewModelProtocol, HotViewModel: HotViewModelProtocol, ChartsViewModel: ChartsViewModelProtocol {
+    @StateObject var viewModel: ViewModel
     @State var actionSheet: MainActionSheet?
+    let alertsViewModel: AlertsViewModel
+    let hotViewModel: HotViewModel
+    let chartsViewModel: ChartsViewModel
     
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
@@ -33,7 +24,7 @@ struct MainView: View {
                 HStack {
                     Button(action: {
                         if viewModel.isSignedIn {
-                            signInWithAppleButtonTapped()
+                            viewModel.signInWithAppleButtonTapped()
                         } else {
                             actionSheet = .hot
                         }
@@ -49,7 +40,7 @@ struct MainView: View {
                     }
                     Button(action: {
                         if viewModel.isSignedIn {
-                            signInWithAppleButtonTapped()
+                            viewModel.signInWithAppleButtonTapped()
                         } else {
                             actionSheet = .graphs
                         }
@@ -64,7 +55,7 @@ struct MainView: View {
                     }
                     Button(action: {
                         if viewModel.isSignedIn {
-                            signInWithAppleButtonTapped()
+                            viewModel.signInWithAppleButtonTapped()
                         } else {
                             actionSheet = .alerts
                         }
@@ -89,7 +80,7 @@ struct MainView: View {
                 SignInWithAppleButton()
                     .frame(width: 280, height: 45)
                     .onTapGesture { // (1)
-                        self.signInWithAppleButtonTapped() // (2)
+                        viewModel.signInWithAppleButtonTapped() // (2)
                     }
                 Text(Resources.Strings.Main.signinRequired)
                     .foregroundColor(.gray)
@@ -163,12 +154,12 @@ struct MainView: View {
         .sheet(item: $actionSheet) { item in
             switch(item) {
             case .alerts:
-                AlertsView(currentData: $viewModel.currentData, actionSheet: $actionSheet, alertsData: AlertsGas.Data(alerts: []))
+                AlertsView(currentData: $viewModel.currentData, actionSheet: $actionSheet, viewModel: alertsViewModel)
                     .navigationTitle(Resources.Strings.Alerts.title)
             case .graphs:
-                ChartsView(actionSheet: $actionSheet)
+                ChartsView(actionSheet: $actionSheet, viewModel: chartsViewModel)
             case .hot:
-                HotView(actionSheet: $actionSheet)
+                HotView<HotViewModel>(actionSheet: $actionSheet, viewModel: hotViewModel)
             case .fees:
                 FeesView(currentData: $viewModel.currentData, actionSheet: $actionSheet)
             }
@@ -183,20 +174,10 @@ struct MainView: View {
             )
         }
     }
-    
-    func signInWithAppleButtonTapped() {
-        signInHandler = SignInWithAppleCoordinator(window: window)
-        signInHandler?.signIn { (user) in
-            #if DEBUG
-            print("User signed in \(user.uid)")
-            #endif
-            self.presentationMode.wrappedValue.dismiss() // (3)
-        }
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(viewModel: MockMainViewModel(isSignedIn: false), alertsViewModel: MockAlertsViewModel(), hotViewModel: MockHotViewModel(), chartsViewModel: MockChartsViewModel())
     }
 }
