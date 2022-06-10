@@ -48,6 +48,6 @@ extension GraphEntry {
         dateFormatter.timeZone = TimeZone.current
         dateFormatter.locale = Locale(identifier: "en-US")
         dateFormatter.dateFormat = "EEE"
-        return String(dateFormatter.string(from: date).prefix(2))
+        return dateFormatter.string(from: date)
     }
 }

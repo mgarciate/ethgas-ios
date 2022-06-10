@@ -69,10 +69,11 @@ struct HotView<ViewModel>: View where ViewModel: HotViewModelProtocol {
                                 ForEach((1..<7).reversed(), id: \.self) { j in
                                     Text(viewModel.hotEntries[IndexPath(row: 0, section: j)]??.entry.weekdayAbbreviated ?? "")
                                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 20, maxHeight: 20)
+                                        .minimumScaleFactor(0.8)
                                 }
                                 Text(Resources.Strings.Hot.today)
                                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 20, maxHeight: 20)
-                                    .minimumScaleFactor(0.1)
+                                    .minimumScaleFactor(0.8)
                             }
                             ForEach(0..<24, id: \.self) { index in
                                 HStack(spacing: 1) {
@@ -107,10 +108,11 @@ struct HotView<ViewModel>: View where ViewModel: HotViewModelProtocol {
                                 ForEach((1..<7).reversed(), id: \.self) { j in
                                     Text(viewModel.hotEntries[IndexPath(row: 0, section: j)]??.entry.weekdayAbbreviated ?? "")
                                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 20, maxHeight: 20)
+                                        .minimumScaleFactor(0.8)
                                 }
                                 Text(Resources.Strings.Hot.today)
                                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 20, maxHeight: 20)
-                                    .minimumScaleFactor(0.1)
+                                    .minimumScaleFactor(0.8)
                             }
                         }
                         .padding([.horizontal, .bottom], 10)
