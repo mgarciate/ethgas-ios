@@ -18,6 +18,11 @@ struct HotView<ViewModel>: View where ViewModel: HotViewModelProtocol {
         GridItem(.fixed(50)),
         GridItem(.fixed(50))
     ]
+    private let weekdayFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEE"
+        return formatter
+    }()
     
     var body: some View {
         ZStack {
@@ -59,13 +64,15 @@ struct HotView<ViewModel>: View where ViewModel: HotViewModelProtocol {
                     ScrollView(.vertical, showsIndicators: false) {
                         VStack(spacing: 1) {
                             HStack(spacing: 1) {
-                                Text("")
+                                Spacer()
                                     .frame(width: 60)
-                                Text("\(startDate())")
-                                Rectangle()
-                                    .frame(height: 1)
-                                    .padding(.horizontal, 5)
+                                ForEach((1..<7).reversed(), id: \.self) { j in
+                                    Text(viewModel.hotEntries[IndexPath(row: 0, section: j)]??.entry.weekdayAbbreviated ?? "")
+                                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 20, maxHeight: 20)
+                                }
                                 Text(Resources.Strings.Hot.today)
+                                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 20, maxHeight: 20)
+                                    .minimumScaleFactor(0.1)
                             }
                             ForEach(0..<24, id: \.self) { index in
                                 HStack(spacing: 1) {
@@ -95,13 +102,15 @@ struct HotView<ViewModel>: View where ViewModel: HotViewModelProtocol {
                                 }
                             }
                             HStack(spacing: 1) {
-                                Text("")
+                                Spacer()
                                     .frame(width: 60)
-                                Text("\(startDate())")
-                                Rectangle()
-                                    .frame(height: 1)
-                                    .padding(.horizontal, 5)
+                                ForEach((1..<7).reversed(), id: \.self) { j in
+                                    Text(viewModel.hotEntries[IndexPath(row: 0, section: j)]??.entry.weekdayAbbreviated ?? "")
+                                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 20, maxHeight: 20)
+                                }
                                 Text(Resources.Strings.Hot.today)
+                                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 20, maxHeight: 20)
+                                    .minimumScaleFactor(0.1)
                             }
                         }
                         .padding([.horizontal, .bottom], 10)

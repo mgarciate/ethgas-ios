@@ -26,7 +26,32 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "09D2593D26184FA000815117"
+            BuildableName = "appwidgetExtension.appex"
+            BlueprintName = "appwidgetExtension"
+            ReferencedContainer = "container:ethgas-ios.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "0906FD6025A3B42D005B4992"
+            BuildableName = "ethgas-ios.app"
+            BlueprintName = "ethgas-ios"
+            ReferencedContainer = "container:ethgas-ios.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "0966583A27B739560073AB79"
+            BuildableName = "ETHWatch Alerts.app"
+            BlueprintName = "ethgas-watchos"
+            ReferencedContainer = "container:ethgas-ios.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO">
