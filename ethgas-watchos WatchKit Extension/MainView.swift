@@ -6,11 +6,10 @@
 //
 
 import SwiftUI
-import FirebaseAuth
 
 struct MainView: View {
     @Environment(\.scenePhase) private var scenePhase
-    @StateObject var viewModel = MainWatchOSViewModel()
+    @StateObject var viewModel = MainWatchViewModel()
     static let dateFormat: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "MMM dd"
@@ -94,13 +93,16 @@ struct MainView: View {
                     )
             }
         }
+        .onAppear() {
+            viewModel.loadData()
+        }
         .onTapGesture {
-            viewModel.fetchData()
+            viewModel.loadData()
         }
         .onChange(of: scenePhase) { phase in
             switch phase {
             case .active:
-                viewModel.fetchData()
+                viewModel.loadData()
             default:
                 print(">> do nothing")
             }
