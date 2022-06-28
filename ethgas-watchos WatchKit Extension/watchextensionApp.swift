@@ -6,14 +6,9 @@
 //
 
 import SwiftUI
-import Firebase
 
 @main
 struct watchExtensionApp: App {
-    
-    init() {
-        FirebaseApp.configure()
-    }
     
     @SceneBuilder var body: some Scene {
         WindowGroup {
