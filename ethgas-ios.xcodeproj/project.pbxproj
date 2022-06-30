@@ -24,7 +24,6 @@
 		0933DC7926975FFC00559EB1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0933DC7826975FFC00559EB1 /* MainViewModel.swift */; };
 		0933DC7D2697627600559EB1 /* HotEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0933DC7C2697627600559EB1 /* HotEntry.swift */; };
 		093A7E762815494D00593BE2 /* watchextensionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093A7E752815494D00593BE2 /* watchextensionApp.swift */; };
-		093A7E7A281549BD00593BE2 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 093A7E79281549BD00593BE2 /* FirebaseDatabase */; };
 		0961740426C6E2B800683EBE /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961740326C6E2B800683EBE /* Resources.swift */; };
 		0961740526C6E2B800683EBE /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961740326C6E2B800683EBE /* Resources.swift */; };
 		0961740826C6E2CF00683EBE /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961740726C6E2CF00683EBE /* Strings.swift */; };
@@ -46,6 +45,8 @@
 		0966585327B739590073AB79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0966585227B739590073AB79 /* Assets.xcassets */; };
 		0966585627B739590073AB79 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0966585527B739590073AB79 /* Preview Assets.xcassets */; };
 		0966585B27B739590073AB79 /* ETHWatch Alerts.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0966583B27B739560073AB79 /* ETHWatch Alerts.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		09847A8F286B99A50034E719 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09847A8D286B99A50034E719 /* NetworkService.swift */; };
+		09847A90286B99A50034E719 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09847A8D286B99A50034E719 /* NetworkService.swift */; };
 		09852A152735A93B00490B8A /* FeesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09852A142735A93B00490B8A /* FeesView.swift */; };
 		09852A182735B78000490B8A /* ItemFeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09852A172735B78000490B8A /* ItemFeeView.swift */; };
 		09852A1B2735BF2900490B8A /* CardValueSmallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09852A1A2735BF2900490B8A /* CardValueSmallView.swift */; };
@@ -96,23 +97,16 @@
 		09D2594626184FA000815117 /* appwidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D2594526184FA000815117 /* appwidget.swift */; };
 		09D2594826184FA100815117 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09D2594726184FA100815117 /* Assets.xcassets */; };
 		09D2594C26184FA100815117 /* appwidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 09D2593E26184FA000815117 /* appwidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		09D2595826186A7D00815117 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D2595726186A7D00815117 /* AppDelegate.swift */; };
-		09D2595B26186EC500815117 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 09D2595A26186EC500815117 /* FirebaseDatabase */; };
 		09D2596026186F7900815117 /* CurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD52FD25B4571D00D751F2 /* CurrentData.swift */; };
-		09D259632618704000815117 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09D259622618704000815117 /* GoogleService-Info.plist */; };
 		09DCD8B02819CE64004D51EF /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961740326C6E2B800683EBE /* Resources.swift */; };
 		09DCD8B12819CE67004D51EF /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961740726C6E2CF00683EBE /* Strings.swift */; };
 		09DCD8B22819CE94004D51EF /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961740C26C6E34600683EBE /* String+Localizable.swift */; };
 		09DCD8B32819CF09004D51EF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0961742626C82FC600683EBE /* Localizable.strings */; };
 		09DCD8B52819D03E004D51EF /* CurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD52FD25B4571D00D751F2 /* CurrentData.swift */; };
-		09DCD8B62819D04C004D51EF /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD52FA25B4555F00D751F2 /* FirebaseService.swift */; };
-		09DCD8B82819D1BD004D51EF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 09DCD8B72819D1BD004D51EF /* FirebaseAuth */; };
 		09DCD8B92819D21A004D51EF /* Graphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FB43F25D0887600D12456 /* Graphs.swift */; };
 		09DCD8BA2819D21A004D51EF /* AlertGas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD52EC25B39B9F00D751F2 /* AlertGas.swift */; };
 		09DCD8BB2819D225004D51EF /* GraphEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FB43D25D087AA00D12456 /* GraphEntry.swift */; };
-		09DCD8BD2819D40B004D51EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09DCD8BC2819D40B004D51EF /* GoogleService-Info.plist */; };
-		09DCD8C02819D517004D51EF /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 09DCD8BF2819D517004D51EF /* FirebaseDatabase */; };
-		09DCD8C6281A7781004D51EF /* MainWatchOSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DCD8C5281A7781004D51EF /* MainWatchOSViewModel.swift */; };
+		09DCD8C6281A7781004D51EF /* MainWatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DCD8C5281A7781004D51EF /* MainWatchViewModel.swift */; };
 		09DCD8CA281A8A4D004D51EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0906FD6825A3B430005B4992 /* Assets.xcassets */; };
 		09DCD8CB281A8A4E004D51EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0906FD6825A3B430005B4992 /* Assets.xcassets */; };
 		09DCD8D3282EC32B004D51EF /* ethgas_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DCD8D2282EC32B004D51EF /* ethgas_iosTests.swift */; };
@@ -256,6 +250,7 @@
 		0966585527B739590073AB79 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0966585727B739590073AB79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0966585827B739590073AB79 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		09847A8D286B99A50034E719 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		09852A142735A93B00490B8A /* FeesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeesView.swift; sourceTree = "<group>"; };
 		09852A172735B78000490B8A /* ItemFeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFeeView.swift; sourceTree = "<group>"; };
 		09852A1A2735BF2900490B8A /* CardValueSmallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValueSmallView.swift; sourceTree = "<group>"; };
@@ -290,10 +285,7 @@
 		09D2594526184FA000815117 /* appwidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appwidget.swift; sourceTree = "<group>"; };
 		09D2594726184FA100815117 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09D2594926184FA100815117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09D2595726186A7D00815117 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		09D259622618704000815117 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		09DCD8BC2819D40B004D51EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		09DCD8C5281A7781004D51EF /* MainWatchOSViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWatchOSViewModel.swift; sourceTree = "<group>"; };
+		09DCD8C5281A7781004D51EF /* MainWatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWatchViewModel.swift; sourceTree = "<group>"; };
 		09DCD8C9281A8954004D51EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		09DCD8D0282EC32B004D51EF /* ethgas-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ethgas-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09DCD8D2282EC32B004D51EF /* ethgas_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ethgas_iosTests.swift; sourceTree = "<group>"; };
@@ -323,9 +315,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09DCD8C02819D517004D51EF /* FirebaseDatabase in Frameworks */,
-				093A7E7A281549BD00593BE2 /* FirebaseDatabase in Frameworks */,
-				09DCD8B82819D1BD004D51EF /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,7 +323,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				09D2594326184FA000815117 /* SwiftUI.framework in Frameworks */,
-				09D2595B26186EC500815117 /* FirebaseDatabase in Frameworks */,
 				09D2594126184FA000815117 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +411,7 @@
 			children = (
 				09BD52F325B4447200D751F2 /* AuthenticationService.swift */,
 				09BD52FA25B4555F00D751F2 /* FirebaseService.swift */,
+				09847A8D286B99A50034E719 /* NetworkService.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -502,7 +491,7 @@
 			isa = PBXGroup;
 			children = (
 				0966584A27B739580073AB79 /* MainView.swift */,
-				09DCD8C5281A7781004D51EF /* MainWatchOSViewModel.swift */,
+				09DCD8C5281A7781004D51EF /* MainWatchViewModel.swift */,
 				0966584C27B739580073AB79 /* NotificationController.swift */,
 				0966584E27B739580073AB79 /* NotificationView.swift */,
 				0966585027B739580073AB79 /* ComplicationController.swift */,
@@ -510,7 +499,6 @@
 				0966585727B739590073AB79 /* Info.plist */,
 				0966585827B739590073AB79 /* PushNotificationPayload.apns */,
 				093A7E752815494D00593BE2 /* watchextensionApp.swift */,
-				09DCD8BC2819D40B004D51EF /* GoogleService-Info.plist */,
 				0966585427B739590073AB79 /* Preview Content */,
 			);
 			path = "ethgas-watchos WatchKit Extension";
@@ -577,11 +565,9 @@
 		09D2594426184FA000815117 /* appwidget */ = {
 			isa = PBXGroup;
 			children = (
-				09D259622618704000815117 /* GoogleService-Info.plist */,
 				09D2594526184FA000815117 /* appwidget.swift */,
 				09D2594726184FA100815117 /* Assets.xcassets */,
 				09D2594926184FA100815117 /* Info.plist */,
-				09D2595726186A7D00815117 /* AppDelegate.swift */,
 			);
 			path = appwidget;
 			sourceTree = "<group>";
@@ -694,9 +680,6 @@
 			);
 			name = "ethgas-watchos WatchKit Extension";
 			packageProductDependencies = (
-				093A7E79281549BD00593BE2 /* FirebaseDatabase */,
-				09DCD8B72819D1BD004D51EF /* FirebaseAuth */,
-				09DCD8BF2819D517004D51EF /* FirebaseDatabase */,
 			);
 			productName = "ethgas-watchos WatchKit Extension";
 			productReference = 0966584327B739580073AB79 /* ethgas-watchos WatchKit Extension.appex */;
@@ -716,7 +699,6 @@
 			);
 			name = appwidgetExtension;
 			packageProductDependencies = (
-				09D2595A26186EC500815117 /* FirebaseDatabase */,
 			);
 			productName = appwidgetExtension;
 			productReference = 09D2593E26184FA000815117 /* appwidgetExtension.appex */;
@@ -824,7 +806,6 @@
 			files = (
 				0966585627B739590073AB79 /* Preview Assets.xcassets in Resources */,
 				09DCD8B32819CF09004D51EF /* Localizable.strings in Resources */,
-				09DCD8BD2819D40B004D51EF /* GoogleService-Info.plist in Resources */,
 				0966585327B739590073AB79 /* Assets.xcassets in Resources */,
 				09DCD8CB281A8A4E004D51EF /* Assets.xcassets in Resources */,
 			);
@@ -836,7 +817,6 @@
 			files = (
 				09D2594826184FA100815117 /* Assets.xcassets in Resources */,
 				0961742426C82FC600683EBE /* Localizable.strings in Resources */,
-				09D259632618704000815117 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -908,13 +888,13 @@
 				09DCD8B92819D21A004D51EF /* Graphs.swift in Sources */,
 				093A7E762815494D00593BE2 /* watchextensionApp.swift in Sources */,
 				0966584D27B739580073AB79 /* NotificationController.swift in Sources */,
-				09DCD8B62819D04C004D51EF /* FirebaseService.swift in Sources */,
 				0966584B27B739580073AB79 /* MainView.swift in Sources */,
 				09DCD8BB2819D225004D51EF /* GraphEntry.swift in Sources */,
-				09DCD8C6281A7781004D51EF /* MainWatchOSViewModel.swift in Sources */,
+				09DCD8C6281A7781004D51EF /* MainWatchViewModel.swift in Sources */,
 				09DCD8B52819D03E004D51EF /* CurrentData.swift in Sources */,
 				09DCD8B02819CE64004D51EF /* Resources.swift in Sources */,
 				09DCD8BA2819D21A004D51EF /* AlertGas.swift in Sources */,
+				09847A90286B99A50034E719 /* NetworkService.swift in Sources */,
 				0966585127B739580073AB79 /* ComplicationController.swift in Sources */,
 				0966584F27B739580073AB79 /* NotificationView.swift in Sources */,
 				09DCD8B12819CE67004D51EF /* Strings.swift in Sources */,
@@ -926,8 +906,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09D2595826186A7D00815117 /* AppDelegate.swift in Sources */,
 				0961741126C6E89100683EBE /* EnvironmentKeys.swift in Sources */,
+				09847A8F286B99A50034E719 /* NetworkService.swift in Sources */,
 				0961740526C6E2B800683EBE /* Resources.swift in Sources */,
 				0961740926C6E2CF00683EBE /* Strings.swift in Sources */,
 				0961740E26C6E34600683EBE /* String+Localizable.swift in Sources */,
@@ -1159,7 +1139,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.0;
+				MARKETING_VERSION = 1.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1187,7 +1167,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.0;
+				MARKETING_VERSION = 1.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1218,7 +1198,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.7.0;
+				MARKETING_VERSION = 1.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -1253,7 +1233,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.7.0;
+				MARKETING_VERSION = 1.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1283,7 +1263,7 @@
 				INFOPLIST_FILE = "ethgas-watchos/Info.plist";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.mgarciate.ethgas;
-				MARKETING_VERSION = 1.7.0;
+				MARKETING_VERSION = 1.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas.watchkitapp;
 				PRODUCT_NAME = "ETHWatch Alerts";
 				SDKROOT = watchos;
@@ -1312,7 +1292,7 @@
 				INFOPLIST_FILE = "ethgas-watchos/Info.plist";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.mgarciate.ethgas;
-				MARKETING_VERSION = 1.7.0;
+				MARKETING_VERSION = 1.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas.watchkitapp;
 				PRODUCT_NAME = "ETHWatch Alerts";
 				SDKROOT = watchos;
@@ -1334,13 +1314,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZR272F7CTF;
 				INFOPLIST_FILE = appwidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.7.0;
+				MARKETING_VERSION = 1.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas.appwidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1359,13 +1339,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZR272F7CTF;
 				INFOPLIST_FILE = appwidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.7.0;
+				MARKETING_VERSION = 1.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas.appwidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1520,26 +1500,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 090FB43825CF327D00D12456 /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = Charts;
-		};
-		093A7E79281549BD00593BE2 /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0906FD7425A3B56F005B4992 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-		09D2595A26186EC500815117 /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0906FD7425A3B56F005B4992 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-		09DCD8B72819D1BD004D51EF /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0906FD7425A3B56F005B4992 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		09DCD8BF2819D517004D51EF /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0906FD7425A3B56F005B4992 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
 		};
 		09DCD8DA282EC461004D51EF /* SnapshotTesting */ = {
 			isa = XCSwiftPackageProductDependency;

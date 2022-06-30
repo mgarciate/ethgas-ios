@@ -44,7 +44,7 @@ class FirebaseServiceImpl: FirebaseService {
                   let fastestMin24h = value["fastestMin24h"] as? Int else {
                 return
             }
-            completion(.success(CurrentData(id: id, timestamp: id, ethusd: ethusd, blockNum: blockNum,fastest: fastest, fast: fast, average: average, averageMax24h: averageMax24h, averageMin24h: averageMin24h, fastMax24h: fastMax24h, fastMin24h: fastMin24h, fastestMax24h: fastestMax24h, fastestMin24h: fastestMin24h)))
+            completion(.success(CurrentData(timestamp: id, ethusd: ethusd, blockNum: blockNum,fastest: fastest, fast: fast, average: average, averageMax24h: averageMax24h, averageMin24h: averageMin24h, fastMax24h: fastMax24h, fastMin24h: fastMin24h, fastestMax24h: fastestMax24h, fastestMin24h: fastestMin24h)))
         }
     }
     

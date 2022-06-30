@@ -180,6 +180,9 @@ struct HotView<ViewModel>: View where ViewModel: HotViewModelProtocol {
                 .cornerRadius(20).shadow(radius: 20)
             }
         }
+        .onAppear() {
+            viewModel.fetchData()
+        }
         .onDisappear() {
             viewModel.removeObserver()
         }

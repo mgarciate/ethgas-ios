@@ -17,13 +17,6 @@ final class HotViewModel: HotViewModelProtocol {
     
     private var weeklyEntries = [GraphEntry]()
     
-    init() {
-        #if DEBUG
-        print("init")
-        #endif
-        fetchData()
-    }
-    
     deinit {
         #if DEBUG
         print("deinit")
@@ -32,6 +25,9 @@ final class HotViewModel: HotViewModelProtocol {
     }
     
     func removeObserver() {
+        #if DEBUG
+        print("removeObserver")
+        #endif
         ref.child("gasprice/graph").removeAllObservers()
     }
     
