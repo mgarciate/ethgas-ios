@@ -138,7 +138,7 @@ struct MainView<ViewModel, AlertsViewModel, HotViewModel, ChartsViewModel>: View
                         Spacer()
                         HStack {
                             VStack(alignment: .trailing) {
-                                Label("\(viewModel.currentData.dateString)", systemImage: "icloud.and.arrow.down")
+                                Label("\(Bundle.main.appVersion() ?? "") - \(viewModel.currentData.dateString)", systemImage: "icloud.and.arrow.down")
                                     .font(.caption)
                                 Button(Resources.Strings.Common.signOut) {
                                     viewModel.signOut()
