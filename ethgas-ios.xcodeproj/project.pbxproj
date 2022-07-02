@@ -47,6 +47,14 @@
 		0966585B27B739590073AB79 /* ETHWatch Alerts.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0966583B27B739560073AB79 /* ETHWatch Alerts.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		09847A8F286B99A50034E719 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09847A8D286B99A50034E719 /* NetworkService.swift */; };
 		09847A90286B99A50034E719 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09847A8D286B99A50034E719 /* NetworkService.swift */; };
+		09847AA328704C930034E719 /* MainMiniView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09847AA228704C930034E719 /* MainMiniView.swift */; };
+		09847AA428704C930034E719 /* MainMiniView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09847AA228704C930034E719 /* MainMiniView.swift */; };
+		09847AA528704C930034E719 /* MainMiniView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09847AA228704C930034E719 /* MainMiniView.swift */; };
+		09847AA728704DAD0034E719 /* MainMiniViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09847AA628704DAD0034E719 /* MainMiniViewTests.swift */; };
+		09847AA928704FE80034E719 /* Bundle+version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09847AA828704FE80034E719 /* Bundle+version.swift */; };
+		09847AAA28704FE80034E719 /* Bundle+version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09847AA828704FE80034E719 /* Bundle+version.swift */; };
+		09847AAB28704FE80034E719 /* Bundle+version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09847AA828704FE80034E719 /* Bundle+version.swift */; };
+		09847AAC2870535D0034E719 /* Bundle+version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09847AA828704FE80034E719 /* Bundle+version.swift */; };
 		09852A152735A93B00490B8A /* FeesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09852A142735A93B00490B8A /* FeesView.swift */; };
 		09852A182735B78000490B8A /* ItemFeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09852A172735B78000490B8A /* ItemFeeView.swift */; };
 		09852A1B2735BF2900490B8A /* CardValueSmallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09852A1A2735BF2900490B8A /* CardValueSmallView.swift */; };
@@ -251,6 +259,9 @@
 		0966585727B739590073AB79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0966585827B739590073AB79 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		09847A8D286B99A50034E719 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		09847AA228704C930034E719 /* MainMiniView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMiniView.swift; sourceTree = "<group>"; };
+		09847AA628704DAD0034E719 /* MainMiniViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMiniViewTests.swift; sourceTree = "<group>"; };
+		09847AA828704FE80034E719 /* Bundle+version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+version.swift"; sourceTree = "<group>"; };
 		09852A142735A93B00490B8A /* FeesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeesView.swift; sourceTree = "<group>"; };
 		09852A172735B78000490B8A /* ItemFeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFeeView.swift; sourceTree = "<group>"; };
 		09852A1A2735BF2900490B8A /* CardValueSmallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValueSmallView.swift; sourceTree = "<group>"; };
@@ -395,6 +406,7 @@
 			children = (
 				0961741326C6E8AF00683EBE /* Items */,
 				0906FD6625A3B42D005B4992 /* MainView.swift */,
+				09847AA228704C930034E719 /* MainMiniView.swift */,
 				09BD52F025B4435100D751F2 /* SignInWithAppleButton.swift */,
 				09BD52E825B393FD00D751F2 /* AlertsView.swift */,
 				090FB43B25CF379900D12456 /* ChartsView.swift */,
@@ -463,6 +475,7 @@
 			children = (
 				09BD52F725B4476D00D751F2 /* EnvironmentKeys.swift */,
 				0961740C26C6E34600683EBE /* String+Localizable.swift */,
+				09847AA828704FE80034E719 /* Bundle+version.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -578,6 +591,7 @@
 				09DCD8FB282EFC6D004D51EF /* Common */,
 				09DCD8D2282EC32B004D51EF /* ethgas_iosTests.swift */,
 				09D1485E284BC9B5009A6800 /* MainViewTests.swift */,
+				09847AA628704DAD0034E719 /* MainMiniViewTests.swift */,
 				09DCD8F5282EF64E004D51EF /* HotViewTests.swift */,
 				09DCD8F7282EFA5C004D51EF /* AlertsViewTests.swift */,
 				09DCD8F9282EFC2F004D51EF /* FrequencySelectionViewTests.swift */,
@@ -842,6 +856,7 @@
 				09852A182735B78000490B8A /* ItemFeeView.swift in Sources */,
 				09F69E6C272D2356000996A2 /* FrequencySelectionView.swift in Sources */,
 				0906FD7D25A3B66F005B4992 /* AppDelegate.swift in Sources */,
+				09847AA928704FE80034E719 /* Bundle+version.swift in Sources */,
 				09852A1B2735BF2900490B8A /* CardValueSmallView.swift in Sources */,
 				09D14869284C7E3B009A6800 /* MockChartsViewModel.swift in Sources */,
 				090FB42B25CF2FD200D12456 /* LineView.swift in Sources */,
@@ -895,7 +910,9 @@
 				09DCD8B02819CE64004D51EF /* Resources.swift in Sources */,
 				09DCD8BA2819D21A004D51EF /* AlertGas.swift in Sources */,
 				09847A90286B99A50034E719 /* NetworkService.swift in Sources */,
+				09847AAB28704FE80034E719 /* Bundle+version.swift in Sources */,
 				0966585127B739580073AB79 /* ComplicationController.swift in Sources */,
+				09847AA428704C930034E719 /* MainMiniView.swift in Sources */,
 				0966584F27B739580073AB79 /* NotificationView.swift in Sources */,
 				09DCD8B12819CE67004D51EF /* Strings.swift in Sources */,
 				09DCD8B22819CE94004D51EF /* String+Localizable.swift in Sources */,
@@ -908,11 +925,13 @@
 			files = (
 				0961741126C6E89100683EBE /* EnvironmentKeys.swift in Sources */,
 				09847A8F286B99A50034E719 /* NetworkService.swift in Sources */,
+				09847AA328704C930034E719 /* MainMiniView.swift in Sources */,
 				0961740526C6E2B800683EBE /* Resources.swift in Sources */,
 				0961740926C6E2CF00683EBE /* Strings.swift in Sources */,
 				0961740E26C6E34600683EBE /* String+Localizable.swift in Sources */,
 				09D2596026186F7900815117 /* CurrentData.swift in Sources */,
 				09D2594626184FA000815117 /* appwidget.swift in Sources */,
+				09847AAA28704FE80034E719 /* Bundle+version.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -930,10 +949,12 @@
 				09D14861284C79FD009A6800 /* ChartsView.swift in Sources */,
 				09DCD8F8282EFA5C004D51EF /* AlertsViewTests.swift in Sources */,
 				09D14845284B641D009A6800 /* FeesViewTests.swift in Sources */,
+				09847AAC2870535D0034E719 /* Bundle+version.swift in Sources */,
 				09D1484C284B6A8E009A6800 /* SignInWithAppleButton.swift in Sources */,
 				09DCD8DF282EC5BE004D51EF /* Strings.swift in Sources */,
 				09D14860284BC9FF009A6800 /* MainView.swift in Sources */,
 				09DCD8FA282EFC2F004D51EF /* FrequencySelectionViewTests.swift in Sources */,
+				09847AA528704C930034E719 /* MainMiniView.swift in Sources */,
 				09DCD8F3282EE32E004D51EF /* MainActionSheet.swift in Sources */,
 				09DCD8E3282ECF04004D51EF /* CurrentData.swift in Sources */,
 				09D1485A284BC705009A6800 /* MainViewModelProtocol.swift in Sources */,
@@ -951,6 +972,7 @@
 				09D14871284D07A7009A6800 /* MockDateProvider.swift in Sources */,
 				09DCD8F6282EF64E004D51EF /* HotViewTests.swift in Sources */,
 				09DCD8E6282ED387004D51EF /* FrequencySelectionView.swift in Sources */,
+				09847AA728704DAD0034E719 /* MainMiniViewTests.swift in Sources */,
 				09D14878284D0EB7009A6800 /* DateProviderService.swift in Sources */,
 				09D1484B284B6711009A6800 /* ItemFee.swift in Sources */,
 				09D14855284B82A1009A6800 /* AlertsView.swift in Sources */,
@@ -1139,7 +1161,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.1;
+				MARKETING_VERSION = 1.7.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1167,7 +1189,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.1;
+				MARKETING_VERSION = 1.7.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1198,7 +1220,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.7.1;
+				MARKETING_VERSION = 1.7.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -1233,7 +1255,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.7.1;
+				MARKETING_VERSION = 1.7.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1263,7 +1285,7 @@
 				INFOPLIST_FILE = "ethgas-watchos/Info.plist";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.mgarciate.ethgas;
-				MARKETING_VERSION = 1.7.1;
+				MARKETING_VERSION = 1.7.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas.watchkitapp;
 				PRODUCT_NAME = "ETHWatch Alerts";
 				SDKROOT = watchos;
@@ -1292,7 +1314,7 @@
 				INFOPLIST_FILE = "ethgas-watchos/Info.plist";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.mgarciate.ethgas;
-				MARKETING_VERSION = 1.7.1;
+				MARKETING_VERSION = 1.7.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas.watchkitapp;
 				PRODUCT_NAME = "ETHWatch Alerts";
 				SDKROOT = watchos;
@@ -1320,7 +1342,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.7.1;
+				MARKETING_VERSION = 1.7.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas.appwidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1345,7 +1367,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.7.1;
+				MARKETING_VERSION = 1.7.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mgarciate.ethgas.appwidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
