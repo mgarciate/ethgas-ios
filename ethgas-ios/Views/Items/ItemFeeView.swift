@@ -26,19 +26,19 @@ struct ItemFeeView: View {
             LazyVGrid(columns: columns, spacing: 20) {
                 VStack(spacing: 5) {
                     Text(Resources.Strings.Common.Speed.fastest.uppercased())
-                    Text("$\(String(format: "%.2f", (Double(data.gasLimit * data.fastest) / 1000000000) * data.ethusd))")
+                    Text("$\(String(format: "%.2f", ((Double(data.gasLimit) * data.fastest) / 1000000000) * data.ethusd))")
                         .bold()
                 }
                 .foregroundColor(.pink)
                 VStack(spacing: 5) {
                     Text(Resources.Strings.Common.Speed.fast.uppercased())
-                    Text("$\(String(format: "%.2f", (Double(data.gasLimit * data.fast) / 1000000000) * data.ethusd))")
+                    Text("$\(String(format: "%.2f", ((Double(data.gasLimit) * data.fast) / 1000000000) * data.ethusd))")
                         .bold()
                 }
                 .foregroundColor(.blue)
                 VStack(spacing: 5) {
                     Text(Resources.Strings.Common.Speed.standard.uppercased())
-                    Text("$\(String(format: "%.2f", (Double(data.gasLimit * data.average) / 1000000000) * data.ethusd))")
+                    Text("$\(String(format: "%.2f", ((Double(data.gasLimit) * data.average) / 1000000000) * data.ethusd))")
                         .bold()
                 }
                 .foregroundColor(.green)

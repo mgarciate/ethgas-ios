@@ -8,13 +8,13 @@
 import SwiftUI
 
 final class CardValueViewModel: ObservableObject {
-    @Published var value: Int
+    @Published var value: String
     let color: Color
     let title: String
     let subtitle: String
     
-    init(value: Int, color: Color, title: String, subtitle: String) {
-        self.value = value
+    init(value: Double, color: Color, title: String, subtitle: String) {
+        self.value = value.gasValueString
         self.color = color
         self.title = title
         self.subtitle = subtitle

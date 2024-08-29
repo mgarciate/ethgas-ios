@@ -12,15 +12,15 @@ struct CurrentData: Codable {
     let timestamp: Int
     let ethusd: Double
     let blockNum: Int
-    let fastest: Int
-    let fast: Int
-    let average: Int
-    let averageMax24h: Int
-    let averageMin24h: Int
-    let fastMax24h: Int
-    let fastMin24h: Int
-    let fastestMax24h: Int
-    let fastestMin24h: Int
+    let fastest: Double
+    let fast: Double
+    let average: Double
+    let averageMax24h: Double
+    let averageMin24h: Double
+    let fastMax24h: Double
+    let fastMin24h: Double
+    let fastestMax24h: Double
+    let fastestMin24h: Double
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -31,7 +31,7 @@ struct CurrentData: Codable {
 
 extension CurrentData {
     static var defaultData: CurrentData {
-        return CurrentData(timestamp: 0, ethusd: 0.0, blockNum: 0, fastest: 0, fast: 0, average: 0, averageMax24h: 0, averageMin24h: 0, fastMax24h: 0, fastMin24h: 0, fastestMax24h: 0, fastestMin24h: 0)
+        return CurrentData(timestamp: 0, ethusd: 0.0, blockNum: 0, fastest: 0.0, fast: 0.0, average: 0.0, averageMax24h: 0.0, averageMin24h: 0.0, fastMax24h: 0.0, fastMin24h: 0.0, fastestMax24h: 0.0, fastestMin24h: 0.0)
     }
     
     static var dummyData: CurrentData {

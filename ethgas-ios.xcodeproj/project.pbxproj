@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,10 @@
 		0933DC7926975FFC00559EB1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0933DC7826975FFC00559EB1 /* MainViewModel.swift */; };
 		0933DC7D2697627600559EB1 /* HotEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0933DC7C2697627600559EB1 /* HotEntry.swift */; };
 		093A7E762815494D00593BE2 /* watchextensionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093A7E752815494D00593BE2 /* watchextensionApp.swift */; };
+		0956321B2C7C976D00B41227 /* Double+ToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0956321A2C7C976D00B41227 /* Double+ToString.swift */; };
+		0956321C2C80580700B41227 /* Double+ToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0956321A2C7C976D00B41227 /* Double+ToString.swift */; };
+		0956321D2C80580800B41227 /* Double+ToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0956321A2C7C976D00B41227 /* Double+ToString.swift */; };
+		0956321E2C80580A00B41227 /* Double+ToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0956321A2C7C976D00B41227 /* Double+ToString.swift */; };
 		0961740426C6E2B800683EBE /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961740326C6E2B800683EBE /* Resources.swift */; };
 		0961740526C6E2B800683EBE /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961740326C6E2B800683EBE /* Resources.swift */; };
 		0961740826C6E2CF00683EBE /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0961740726C6E2CF00683EBE /* Strings.swift */; };
@@ -238,6 +242,7 @@
 		0933DC7826975FFC00559EB1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		0933DC7C2697627600559EB1 /* HotEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotEntry.swift; sourceTree = "<group>"; };
 		093A7E752815494D00593BE2 /* watchextensionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchextensionApp.swift; sourceTree = "<group>"; };
+		0956321A2C7C976D00B41227 /* Double+ToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+ToString.swift"; sourceTree = "<group>"; };
 		0961740326C6E2B800683EBE /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		0961740726C6E2CF00683EBE /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		0961740C26C6E34600683EBE /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
@@ -476,6 +481,7 @@
 				09BD52F725B4476D00D751F2 /* EnvironmentKeys.swift */,
 				0961740C26C6E34600683EBE /* String+Localizable.swift */,
 				09847AA828704FE80034E719 /* Bundle+version.swift */,
+				0956321A2C7C976D00B41227 /* Double+ToString.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -862,6 +868,7 @@
 				090FB42B25CF2FD200D12456 /* LineView.swift in Sources */,
 				0961740826C6E2CF00683EBE /* Strings.swift in Sources */,
 				0961740D26C6E34600683EBE /* String+Localizable.swift in Sources */,
+				0956321B2C7C976D00B41227 /* Double+ToString.swift in Sources */,
 				0933DC7D2697627600559EB1 /* HotEntry.swift in Sources */,
 				09D14876284D0E2C009A6800 /* DateProvider.swift in Sources */,
 				09D14873284D0D75009A6800 /* DateProviderService.swift in Sources */,
@@ -910,6 +917,7 @@
 				09DCD8B02819CE64004D51EF /* Resources.swift in Sources */,
 				09DCD8BA2819D21A004D51EF /* AlertGas.swift in Sources */,
 				09847A90286B99A50034E719 /* NetworkService.swift in Sources */,
+				0956321D2C80580800B41227 /* Double+ToString.swift in Sources */,
 				09847AAB28704FE80034E719 /* Bundle+version.swift in Sources */,
 				0966585127B739580073AB79 /* ComplicationController.swift in Sources */,
 				09847AA428704C930034E719 /* MainMiniView.swift in Sources */,
@@ -929,6 +937,7 @@
 				0961740526C6E2B800683EBE /* Resources.swift in Sources */,
 				0961740926C6E2CF00683EBE /* Strings.swift in Sources */,
 				0961740E26C6E34600683EBE /* String+Localizable.swift in Sources */,
+				0956321C2C80580700B41227 /* Double+ToString.swift in Sources */,
 				09D2596026186F7900815117 /* CurrentData.swift in Sources */,
 				09D2594626184FA000815117 /* appwidget.swift in Sources */,
 				09847AAA28704FE80034E719 /* Bundle+version.swift in Sources */,
@@ -955,6 +964,7 @@
 				09D14860284BC9FF009A6800 /* MainView.swift in Sources */,
 				09DCD8FA282EFC2F004D51EF /* FrequencySelectionViewTests.swift in Sources */,
 				09847AA528704C930034E719 /* MainMiniView.swift in Sources */,
+				0956321E2C80580A00B41227 /* Double+ToString.swift in Sources */,
 				09DCD8F3282EE32E004D51EF /* MainActionSheet.swift in Sources */,
 				09DCD8E3282ECF04004D51EF /* CurrentData.swift in Sources */,
 				09D1485A284BC705009A6800 /* MainViewModelProtocol.swift in Sources */,
@@ -1488,8 +1498,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/danielgindi/Charts.git";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = exactVersion;
+				version = 4.1.0;
 			};
 		};
 		09DCD8D9282EC461004D51EF /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {

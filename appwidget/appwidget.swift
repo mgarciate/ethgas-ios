@@ -56,11 +56,12 @@ struct appwidgetEntryView : View {
 
     var body: some View {
         MainMiniView(currentData: .constant(entry.currentData))
-        .onAppear() {
-            #if DEBUG
-            print(entry)
-            #endif
-        }
+            .widgetBackground(Color("White"))
+            .onAppear() {
+                #if DEBUG
+                print(entry)
+                #endif
+            }
     }
 }
 
@@ -87,6 +88,18 @@ struct appwidget_Previews: PreviewProvider {
                 .previewContext(WidgetPreviewContext(family: .systemMedium))
             appwidgetEntryView(entry: SimpleEntry(date: Date(), currentData: CurrentData.dummyData))
                     .previewContext(WidgetPreviewContext(family: .systemLarge))
+        }
+    }
+}
+
+extension View {
+    func widgetBackground(_ backgroundView: some View) -> some View {
+        if #available(iOSApplicationExtension 17.0, *) {
+            return containerBackground(for: .widget) {
+                backgroundView
+            }
+        } else {
+            return background(backgroundView)
         }
     }
 }

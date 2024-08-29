@@ -10,7 +10,7 @@ import WidgetKit
 import SwiftUI
 
 final class MainViewModel: MainViewModelProtocol {
-    @Published var currentData: CurrentData = CurrentData.dummyData
+    @Published var currentData: CurrentData = CurrentData.defaultData
     @Published var isSignedIn = false
     @Published var isMigrationAlertPresented = false
     @Environment(\.window) var window: UIWindow?

@@ -21,7 +21,7 @@ struct MainMiniView: View {
                 ZStack {
                     Color.gray.opacity(0.1)
                     VStack(spacing: 4) {
-                        Text("\(currentData.fastest)")
+                        Text(currentData.fastest.gasValueStringShort)
                             .font(.title2)
                             .foregroundColor(.pink)
                         Rectangle()
@@ -38,7 +38,7 @@ struct MainMiniView: View {
                 ZStack {
                     Color.gray.opacity(0.1)
                     VStack(spacing: 4) {
-                        Text("\(currentData.fast)")
+                        Text(currentData.fast.gasValueStringShort)
                             .font(.title2)
                             .foregroundColor(.blue)
                         Rectangle()
@@ -57,7 +57,7 @@ struct MainMiniView: View {
                 ZStack {
                     Color.gray.opacity(0.1)
                     VStack(spacing: 4) {
-                        Text("\(currentData.average)")
+                        Text(currentData.average.gasValueStringShort)
                             .font(.title2)
                             .foregroundColor(.green)
                         Rectangle()
