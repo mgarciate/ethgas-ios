@@ -9,6 +9,6 @@ import Foundation
 
 struct HotEntry {
     let entry: GraphEntry
-    let value: Int
+    let value: Double
     let alpha: Double
 }

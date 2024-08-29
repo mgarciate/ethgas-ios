@@ -22,16 +22,16 @@ class AlertsViewTests: XCTestCase {
     
     func testItemAlertView() throws {
         let itemAlertview = ItemAlertView(alert: AlertGas(value: 80, direction: AlertGasDirection.down, type: .standard, frequency: .once))
-        assertSnapshot(matching: itemAlertview, as: .image(layout: .fixed(width: ViewImageConfig.iPhoneX.size!.width, height: 50)))
+        assertSnapshot(of: itemAlertview, as: .image(layout: .fixed(width: ViewImageConfig.iPhoneX.size!.width, height: 50)))
     }
 
     func testAlertsViewRegularScreen() throws {
-        assertSnapshot(matching: viewController, as: .image(on: .iPhoneX))
-        assertSnapshot(matching: viewController, as: .image(on: .iPhoneX, traits: traitDarkMode))
+        assertSnapshot(of: viewController, as: .image(on: .iPhoneX))
+        assertSnapshot(of: viewController, as: .image(on: .iPhoneX, traits: traitDarkMode))
     }
     
     func testAlertViewLargeScreen() throws {
-        assertSnapshot(matching: viewController, as: .image(on: .iPhoneXsMax))
-        assertSnapshot(matching: viewController, as: .image(on: .iPhoneXsMax, traits: traitDarkMode))
+        assertSnapshot(of: viewController, as: .image(on: .iPhoneXsMax))
+        assertSnapshot(of: viewController, as: .image(on: .iPhoneXsMax, traits: traitDarkMode))
     }
 }

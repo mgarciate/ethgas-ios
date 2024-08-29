@@ -28,12 +28,12 @@ final class HotViewModel: HotViewModelProtocol {
         #if DEBUG
         print("removeObserver")
         #endif
-        ref.child("gasprice/graph").removeAllObservers()
+        ref.child("v2/gasprice/graph").removeAllObservers()
     }
     
     func fetchData() {
         guard let _ = Auth.auth().currentUser else { return }
-        ref.child("gasprice/graph").observe(.value) { snapshot in
+        ref.child("v2/gasprice/graph").observe(.value) { snapshot in
             #if DEBUG
             print("*** fetchData")
             #endif
@@ -42,9 +42,9 @@ final class HotViewModel: HotViewModelProtocol {
                 guard let value = (child as? DataSnapshot)?.value as? NSDictionary,
                       let timestamp = value["timestamp"] as? Int,
                       let ethusd = value["ethusd"] as? Double,
-                      let fastest = value["fastest"] as? Int,
-                      let fast = value["fast"] as? Int,
-                      let average = value["average"] as? Int else {
+                      let fastest = value["fastest"] as? Double,
+                      let fast = value["fast"] as? Double,
+                      let average = value["average"] as? Double else {
                     return
                 }
                 dailyEntries.append(GraphEntry(timestamp: timestamp, ethusd: ethusd, fastest: fastest, fast: fast, average: average))
@@ -53,10 +53,10 @@ final class HotViewModel: HotViewModelProtocol {
                 guard let value = (child as? DataSnapshot)?.value as? NSDictionary,
                       let timestamp = value["timestamp"] as? Int,
                       let ethusd = value["ethusd"] as? Double,
-                      let fastest = value["fastest"] as? Int,
-                      let fast = value["fast"] as? Int,
-                      let average = value["average"] as? Int else {
-                    return GraphEntry(timestamp: 0, ethusd: 0, fastest: 0, fast: 0, average: 0)
+                      let fastest = value["fastest"] as? Double,
+                      let fast = value["fast"] as? Double,
+                      let average = value["average"] as? Double else {
+                          return GraphEntry(timestamp: 0, ethusd: 0.0, fastest: 0.0, fast: 0.0, average: 0.0)
                 }
                 return GraphEntry(timestamp: timestamp, ethusd: ethusd, fastest: fastest, fast: fast, average: average)
             }
@@ -66,7 +66,7 @@ final class HotViewModel: HotViewModelProtocol {
     
     private func formatWeeklyEntries() {
         var aux = [IndexPath: HotEntry?]()
-        let values: [Int] = weeklyEntries.map {
+        let values: [Double] = weeklyEntries.map {
             switch typeSelected {
             case 0:
                 return $0.fastest
@@ -77,10 +77,10 @@ final class HotViewModel: HotViewModelProtocol {
             }
         }
         let valueMin = values.min() ?? 0
-        let valueMax = values.max() ?? Int.max
+        let valueMax = values.max() ?? Double.greatestFiniteMagnitude
         weeklyEntries.forEach { entry in
             if let day = entry.dayDifference, day < 7, day >= 0, let hour = entry.hour, hour < 24, hour >= 0 {
-                let value: Int
+                let value: Double
                 switch typeSelected {
                 case 0:
                     value = entry.fastest
@@ -89,7 +89,7 @@ final class HotViewModel: HotViewModelProtocol {
                 default:
                     value = entry.average
                 }
-                aux[IndexPath(row: hour, section: day)] = HotEntry(entry: entry, value: value, alpha: (Double(entry.fast - valueMin) / Double(valueMax - valueMin)))
+                aux[IndexPath(row: hour, section: day)] = HotEntry(entry: entry, value: value, alpha: (entry.fast - valueMin) / (valueMax - valueMin))
             }
         }
         hotEntries = aux

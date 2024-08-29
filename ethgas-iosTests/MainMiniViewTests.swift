@@ -19,7 +19,7 @@ class MainMiniViewTests: XCTestCase {
     
     func testMiniView() throws {
         let view = MainMiniView(currentData: .constant(CurrentData.dummyData))
-        assertSnapshot(matching: view, as: .image(layout: .fixed(width: 200.0, height: 200.0)))
-        assertSnapshot(matching: view, as: .image(layout: .fixed(width: 200.0, height: 200.0), traits: traitDarkMode))
+        assertSnapshot(of: view, as: .image(layout: .fixed(width: 200.0, height: 200.0)))
+        assertSnapshot(of: view, as: .image(layout: .fixed(width: 200.0, height: 200.0), traits: traitDarkMode))
     }
 }

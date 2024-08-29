@@ -59,11 +59,11 @@ final class AlertsViewModel: AlertsViewModelProtocol {
         let currentValue: Int
         switch typeSelected {
         case 0:
-            currentValue = currentData.fastest
+            currentValue = Int(currentData.fastest)
         case 1:
-            currentValue = currentData.fast
+            currentValue = Int(currentData.fast)
         default:
-            currentValue = currentData.average
+            currentValue = Int(currentData.average)
         }
         return (currentValue < Int(value) ?? 0) ? .up : .down
     }

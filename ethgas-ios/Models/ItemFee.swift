@@ -10,8 +10,8 @@ import Foundation
 struct ItemFee {
     let title: String
     let gasLimit: Int
-    let fastest: Int
-    let fast: Int
-    let average: Int
+    let fastest: Double
+    let fast: Double
+    let average: Double
     let ethusd: Double
 }

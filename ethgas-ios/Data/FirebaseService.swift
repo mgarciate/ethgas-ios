@@ -27,21 +27,21 @@ class FirebaseServiceImpl: FirebaseService {
     }
     
     func currentData(completion: @escaping (Result<CurrentData, Error>) -> Void) {
-        ref.child("gasprice/current/values").observe(.value) { snapshot in
+        ref.child("v2/gasprice/current/values").observe(.value) { snapshot in
             // Get gas price value
             guard let value = snapshot.value as? NSDictionary,
                   let id = value["uid"] as? Int,
                   let ethusd = value["ethusd"] as? Double,
                   let blockNum = value["blockNum"] as? Int,
-                  let fastest = value["fastest"] as? Int,
-                  let fast = value["fast"] as? Int,
-                  let average = value["average"] as? Int,
-                  let averageMax24h = value["averageMax24h"] as? Int,
-                  let averageMin24h = value["averageMin24h"] as? Int,
-                  let fastMax24h = value["fastMax24h"] as? Int,
-                  let fastMin24h = value["fastMin24h"] as? Int,
-                  let fastestMax24h = value["fastestMax24h"] as? Int,
-                  let fastestMin24h = value["fastestMin24h"] as? Int else {
+                  let fastest = value["fastest"] as? Double,
+                  let fast = value["fast"] as? Double,
+                  let average = value["average"] as? Double,
+                  let averageMax24h = value["averageMax24h"] as? Double,
+                  let averageMin24h = value["averageMin24h"] as? Double,
+                  let fastMax24h = value["fastMax24h"] as? Double,
+                  let fastMin24h = value["fastMin24h"] as? Double,
+                  let fastestMax24h = value["fastestMax24h"] as? Double,
+                  let fastestMin24h = value["fastestMin24h"] as? Double else {
                 return
             }
             completion(.success(CurrentData(timestamp: id, ethusd: ethusd, blockNum: blockNum,fastest: fastest, fast: fast, average: average, averageMax24h: averageMax24h, averageMin24h: averageMin24h, fastMax24h: fastMax24h, fastMin24h: fastMin24h, fastestMax24h: fastestMax24h, fastestMin24h: fastestMin24h)))
@@ -120,15 +120,15 @@ class FirebaseServiceImpl: FirebaseService {
     
     func graphs(completion: @escaping (Result<Graphs, Error>) -> Void) {
         guard let _ = Auth.auth().currentUser else { return }
-        ref.child("gasprice/graph").observe(.value) { snapshot in
+        ref.child("v2/gasprice/graph").observe(.value) { snapshot in
             var dailyEntries = [GraphEntry]()
             for child in snapshot.childSnapshot(forPath: "daily").children {
                 guard let value = (child as? DataSnapshot)?.value as? NSDictionary,
                       let timestamp = value["timestamp"] as? Int,
                       let ethusd = value["ethusd"] as? Double,
-                      let fastest = value["fastest"] as? Int,
-                      let fast = value["fast"] as? Int,
-                      let average = value["average"] as? Int else {
+                      let fastest = value["fastest"] as? Double,
+                      let fast = value["fast"] as? Double,
+                      let average = value["average"] as? Double else {
                     return
                 }
                 dailyEntries.append(GraphEntry(timestamp: timestamp, ethusd: ethusd, fastest: fastest, fast: fast, average: average))
@@ -138,9 +138,9 @@ class FirebaseServiceImpl: FirebaseService {
                 guard let value = (child as? DataSnapshot)?.value as? NSDictionary,
                       let timestamp = value["timestamp"] as? Int,
                       let ethusd = value["ethusd"] as? Double,
-                      let fastest = value["fastest"] as? Int,
-                      let fast = value["fast"] as? Int,
-                      let average = value["average"] as? Int else {
+                      let fastest = value["fastest"] as? Double,
+                      let fast = value["fast"] as? Double,
+                      let average = value["average"] as? Double else {
                     return
                 }
                 weeklyEntries.append(GraphEntry(timestamp: timestamp, ethusd: ethusd, fastest: fastest, fast: fast, average: average))
