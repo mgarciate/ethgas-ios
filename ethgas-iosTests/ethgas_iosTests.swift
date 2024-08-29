@@ -27,14 +27,14 @@ class ethgas_iosTests: XCTestCase {
         
         let valueViewModel = CardValueViewModel(value: 30, color: .pink, title: Resources.Strings.Common.Speed.fastest.uppercased(), subtitle: Resources.Strings.Common.Speed.fastestSubtitle)
         let cardValueView = CardValueView(viewModel: valueViewModel)
-        assertSnapshot(matching: cardValueView, as: .image(layout: .fixed(width: ViewImageConfig.iPhoneX.size!.width, height: 100)))
+        assertSnapshot(of: cardValueView, as: .image(layout: .fixed(width: ViewImageConfig.iPhoneX.size!.width, height: 100)))
         
         let cardValueSmallView = CardValueSmallView(viewModel: valueViewModel)
-        assertSnapshot(matching: cardValueSmallView, as: .image(layout: .fixed(width: 100, height: 100)))
+        assertSnapshot(of: cardValueSmallView, as: .image(layout: .fixed(width: 100, height: 100)))
     }
     
     func testAppleSignInButton() throws {
         let button = SignInWithAppleButton()
-        assertSnapshot(matching: button, as: .image)
+        assertSnapshot(of: button, as: .image)
     }
 }

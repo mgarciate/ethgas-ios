@@ -20,12 +20,12 @@ class HotViewTests: XCTestCase {
     }
 
     func testHotViewRegularScreen() throws {
-        assertSnapshot(matching: viewController, as: .image(on: .iPhoneX))
-        assertSnapshot(matching: viewController, as: .image(on: .iPhoneX, traits: traitDarkMode))
+        assertSnapshot(of: viewController, as: .image(on: .iPhoneX))
+        assertSnapshot(of: viewController, as: .image(on: .iPhoneX, traits: traitDarkMode))
     }
     
     func testHotViewLargeScreen() throws {
-        assertSnapshot(matching: viewController, as: .image(on: .iPhoneXsMax))
-        assertSnapshot(matching: viewController, as: .image(on: .iPhoneXsMax, traits: traitDarkMode))
+        assertSnapshot(of: viewController, as: .image(on: .iPhoneXsMax))
+        assertSnapshot(of: viewController, as: .image(on: .iPhoneXsMax, traits: traitDarkMode))
     }
 }
