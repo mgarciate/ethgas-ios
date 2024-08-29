@@ -18,7 +18,7 @@ class NetworkService<T> where T: Codable {
     
     init() {
         urlSession = URLSession.shared
-        baseURL = "https://ethgas.tedejo.es/api"
+        baseURL = "https://ethgas.tedejo.es/api/v2"
     }
     
     func get(endpoint: String) async throws -> T {

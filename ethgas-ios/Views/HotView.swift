@@ -89,7 +89,7 @@ struct HotView<ViewModel>: View where ViewModel: HotViewModelProtocol {
                                             ZStack {
                                                 if let value = viewModel.hotEntries[IndexPath(row: index, section: j)], let hotEntry = value {
                                                     Color.red.opacity(hotEntry.alpha)
-                                                    Text("\(hotEntry.value)")
+                                                    Text(hotEntry.value.gasValueStringShort)
                                                         .foregroundColor(Color("Black"))
                                                 } else {
                                                     Color.clear
@@ -145,24 +145,24 @@ struct HotView<ViewModel>: View where ViewModel: HotViewModelProtocol {
                         HStack {
                             Text(Resources.Strings.Common.Speed.fastest)
                             Spacer()
-                            if let value = selectedEntry?.entry.fastest {
-                                Text("\(value)")
+                            if let value = selectedEntry?.entry.fastest.gasValueString {
+                                Text(value)
                             }
                         }
                         .foregroundColor(Color("Black"))
                         HStack {
                             Text(Resources.Strings.Common.Speed.fast)
                             Spacer()
-                            if let value = selectedEntry?.entry.fast {
-                                Text("\(value)")
+                            if let value = selectedEntry?.entry.fast.gasValueString {
+                                Text(value)
                             }
                         }
                         .foregroundColor(Color("Black"))
                         HStack {
                             Text(Resources.Strings.Common.Speed.standard)
                             Spacer()
-                            if let value = selectedEntry?.entry.average {
-                                Text("\(value)")
+                            if let value = selectedEntry?.entry.average.gasValueString {
+                                Text(value)
                             }
                         }
                         .foregroundColor(Color("Black"))

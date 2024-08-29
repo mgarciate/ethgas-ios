@@ -115,18 +115,18 @@ struct MainView<ViewModel, AlertsViewModel, HotViewModel, ChartsViewModel>: View
                             Text(Resources.Strings.Main._24hMin)
                         }
                         VStack(spacing: 5) {
-                            Text("\(viewModel.currentData.fastestMax24h)")
-                            Text("\(viewModel.currentData.fastestMin24h)")
+                            Text(viewModel.currentData.fastestMax24h.gasValueString)
+                            Text(viewModel.currentData.fastestMin24h.gasValueString)
                         }
                         .foregroundColor(.pink)
                         VStack(spacing: 5) {
-                            Text("\(viewModel.currentData.fastMax24h)")
-                            Text("\(viewModel.currentData.fastMin24h)")
+                            Text(viewModel.currentData.fastMax24h.gasValueString)
+                            Text(viewModel.currentData.fastMin24h.gasValueString)
                         }
                         .foregroundColor(.blue)
                         VStack(spacing: 5) {
-                            Text("\(viewModel.currentData.averageMax24h)")
-                            Text("\(viewModel.currentData.averageMin24h)")
+                            Text(viewModel.currentData.averageMax24h.gasValueString)
+                            Text(viewModel.currentData.averageMin24h.gasValueString)
                         }
                         .foregroundColor(.green)
                     }
@@ -138,7 +138,7 @@ struct MainView<ViewModel, AlertsViewModel, HotViewModel, ChartsViewModel>: View
                         Spacer()
                         HStack {
                             VStack(alignment: .trailing) {
-                                Label("\(viewModel.currentData.dateString)", systemImage: "icloud.and.arrow.down")
+                                Label("\(Bundle.main.appVersion() ?? "") - \(viewModel.currentData.dateString)", systemImage: "icloud.and.arrow.down")
                                     .font(.caption)
                                 Button(Resources.Strings.Common.signOut) {
                                     viewModel.signOut()

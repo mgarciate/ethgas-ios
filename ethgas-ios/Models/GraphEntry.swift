@@ -10,14 +10,14 @@ import Foundation
 struct GraphEntry {
     let timestamp: Int
     let ethusd: Double
-    let fastest: Int
-    let fast: Int
-    let average: Int
+    let fastest: Double
+    let fast: Double
+    let average: Double
 }
 
 extension GraphEntry {
     static var dummyData: GraphEntry {
-        return GraphEntry(timestamp: 0, ethusd: 0.0, fastest: 0, fast: 0, average: 0)
+        return GraphEntry(timestamp: 0, ethusd: 0.0, fastest: 0.0, fast: 0.0, average: 0.0)
     }
     
     var dateString: String {

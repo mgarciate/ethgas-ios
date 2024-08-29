@@ -21,16 +21,16 @@ class FeesViewTests: XCTestCase {
     
     func testItemFeeView() throws {
         let view = ItemFeeView(data: ItemFee(title: "ETH Transfer", gasLimit: 21000, fastest: 100, fast: 50, average: 25, ethusd: 4000))
-        assertSnapshot(matching: view, as: .image(layout: .fixed(width: ViewImageConfig.iPhoneX.size!.width, height: 100)))
+        assertSnapshot(of: view, as: .image(layout: .fixed(width: ViewImageConfig.iPhoneX.size!.width, height: 100)))
     }
 
     func testFeesViewRegularScreen() throws {
-        assertSnapshot(matching: viewController, as: .image(on: .iPhoneX))
-        assertSnapshot(matching: viewController, as: .image(on: .iPhoneX, traits: traitDarkMode))
+        assertSnapshot(of: viewController, as: .image(on: .iPhoneX))
+        assertSnapshot(of: viewController, as: .image(on: .iPhoneX, traits: traitDarkMode))
     }
     
     func testFeesViewLargeScreen() throws {
-        assertSnapshot(matching: viewController, as: .image(on: .iPhoneXsMax))
-        assertSnapshot(matching: viewController, as: .image(on: .iPhoneXsMax, traits: traitDarkMode))
+        assertSnapshot(of: viewController, as: .image(on: .iPhoneXsMax))
+        assertSnapshot(of: viewController, as: .image(on: .iPhoneXsMax, traits: traitDarkMode))
     }
 }

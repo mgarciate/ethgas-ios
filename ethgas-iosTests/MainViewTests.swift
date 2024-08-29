@@ -20,25 +20,25 @@ class MainViewTests: XCTestCase {
 
     func testMainUnsignedRegularScreen() throws {
         let viewController = MainView<MockMainViewModel, MockAlertsViewModel, MockHotViewModel, MockChartsViewModel>(viewModel: MockMainViewModel(isSignedIn: true), alertsViewModel: MockAlertsViewModel(), hotViewModel: MockHotViewModel(), chartsViewModel: MockChartsViewModel()).toVC()
-        assertSnapshot(matching: viewController, as: .image(on: .iPhoneX))
-        assertSnapshot(matching: viewController, as: .image(on: .iPhoneX, traits: traitDarkMode))
+        assertSnapshot(of: viewController, as: .image(on: .iPhoneX))
+        assertSnapshot(of: viewController, as: .image(on: .iPhoneX, traits: traitDarkMode))
     }
     
     func testMainUnsignedLargeScreen() throws {
         let viewController = MainView<MockMainViewModel, MockAlertsViewModel, MockHotViewModel, MockChartsViewModel>(viewModel: MockMainViewModel(isSignedIn: true), alertsViewModel: MockAlertsViewModel(), hotViewModel: MockHotViewModel(), chartsViewModel: MockChartsViewModel()).toVC()
-        assertSnapshot(matching: viewController, as: .image(on: .iPhoneXsMax))
-        assertSnapshot(matching: viewController, as: .image(on: .iPhoneXsMax, traits: traitDarkMode))
+        assertSnapshot(of: viewController, as: .image(on: .iPhoneXsMax))
+        assertSnapshot(of: viewController, as: .image(on: .iPhoneXsMax, traits: traitDarkMode))
     }
     
     func testMainSignedRegularScreen() throws {
         let viewController = MainView<MockMainViewModel, MockAlertsViewModel, MockHotViewModel, MockChartsViewModel>(viewModel: MockMainViewModel(isSignedIn: false), alertsViewModel: MockAlertsViewModel(), hotViewModel: MockHotViewModel(), chartsViewModel: MockChartsViewModel()).toVC()
-        assertSnapshot(matching: viewController, as: .image(on: .iPhoneX))
-        assertSnapshot(matching: viewController, as: .image(on: .iPhoneX, traits: traitDarkMode))
+        assertSnapshot(of: viewController, as: .image(on: .iPhoneX))
+        assertSnapshot(of: viewController, as: .image(on: .iPhoneX, traits: traitDarkMode))
     }
     
     func testMainSignedLargeScreen() throws {
         let viewController = MainView<MockMainViewModel, MockAlertsViewModel, MockHotViewModel, MockChartsViewModel>(viewModel: MockMainViewModel(isSignedIn: false), alertsViewModel: MockAlertsViewModel(), hotViewModel: MockHotViewModel(), chartsViewModel: MockChartsViewModel()).toVC()
-        assertSnapshot(matching: viewController, as: .image(on: .iPhoneXsMax))
-        assertSnapshot(matching: viewController, as: .image(on: .iPhoneXsMax, traits: traitDarkMode))
+        assertSnapshot(of: viewController, as: .image(on: .iPhoneXsMax))
+        assertSnapshot(of: viewController, as: .image(on: .iPhoneXsMax, traits: traitDarkMode))
     }
 }
