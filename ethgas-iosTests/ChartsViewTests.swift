@@ -20,12 +20,18 @@ class ChartsViewTests: XCTestCase {
     }
 
     func testChartsViewRegularScreen() throws {
-        assertSnapshot(of: viewController, as: .image(on: .iPhoneX))
-        assertSnapshot(of: viewController, as: .image(on: .iPhoneX, traits: traitDarkMode))
+        // .image(drawHierarchyInKeyWindow: true, size: CGSize(width: 375, height: 812))
+        // Workaround to keep the tests working with Swift Charts
+        // See at https://github.com/pointfreeco/swift-snapshot-testing/discussions/784
+        assertSnapshot(of: viewController, as: .image(drawHierarchyInKeyWindow: true, size: CGSize(width: 375, height: 812)))
+        assertSnapshot(of: viewController, as: .image(drawHierarchyInKeyWindow: true, size: CGSize(width: 375, height: 812), traits: traitDarkMode))
     }
     
     func testChartsViewLargeScreen() throws {
-        assertSnapshot(of: viewController, as: .image(on: .iPhoneXsMax))
-        assertSnapshot(of: viewController, as: .image(on: .iPhoneXsMax, traits: traitDarkMode))
+        // .image(drawHierarchyInKeyWindow: true, size: CGSize(width: 414, height: 896))
+        // Workaround to keep the tests working with Swift Charts
+        // See at https://github.com/pointfreeco/swift-snapshot-testing/discussions/784
+        assertSnapshot(of: viewController, as: .image(drawHierarchyInKeyWindow: true, size: CGSize(width: 414, height: 896)))
+        assertSnapshot(of: viewController, as: .image(drawHierarchyInKeyWindow: true, size: CGSize(width: 414, height: 896), traits: traitDarkMode))
     }
 }
