@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct GraphEntry {
+struct GraphEntry: Identifiable, Equatable {
+    let id: UUID = UUID()
     let timestamp: Int
     let ethusd: Double
     let fastest: Double

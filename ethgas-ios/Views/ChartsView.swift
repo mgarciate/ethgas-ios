@@ -40,12 +40,16 @@ struct ChartsView<ViewModel>: View where ViewModel: ChartsViewModelProtocol {
             .padding(.top, 10)
             VStack {
                 if viewModel.dailyEntries.count > 0 {
-                    LineView(entries: viewModel.dailyEntries, graphType: .daily, description: Resources.Strings.Charts._24h)
-                        .frame(minHeight: 0, maxHeight: .infinity)
+                    GroupBox(Resources.Strings.Charts._24h) {
+                        ChartLineMarksView(entries: viewModel.dailyEntries, graphType: .daily)
+                    }
+                    .frame(minHeight: 0, maxHeight: .infinity)
                 }
                 if viewModel.weeklyEntries.count > 0 {
-                    LineView(entries: viewModel.weeklyEntries, graphType: .weekly, description: Resources.Strings.Charts._7d)
-                        .frame(minHeight: 0, maxHeight: .infinity)
+                    GroupBox(Resources.Strings.Charts._7d) {
+                        ChartLineMarksView(entries: viewModel.weeklyEntries, graphType: .weekly)
+                    }
+                    .frame(minHeight: 0, maxHeight: .infinity)
                 }
                 Spacer()
             }

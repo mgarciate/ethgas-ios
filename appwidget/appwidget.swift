@@ -55,13 +55,12 @@ struct appwidgetEntryView : View {
     }()
 
     var body: some View {
-        MainMiniView(currentData: .constant(entry.currentData))
-            .widgetBackground(Color("White"))
-            .onAppear() {
-                #if DEBUG
-                print(entry)
-                #endif
-            }
+        if #available(iOSApplicationExtension 17.0, *) {
+            ZStack{}
+                .widgetBackground(MainMiniView(currentData: .constant(entry.currentData)))
+        } else {
+            MainMiniView(currentData: .constant(entry.currentData))
+        }
     }
 }
 

@@ -22,8 +22,8 @@ final class ChartsViewModel: ChartsViewModelProtocol {
         firebaseService.graphs { result in
             switch result {
             case.success(let graphs):
-                self.dailyEntries = graphs.daily
-                self.weeklyEntries = graphs.weekly
+                self.dailyEntries = graphs.daily.reversed()
+                self.weeklyEntries = graphs.weekly.reversed()
             case .failure(let error):
                 print(error.localizedDescription)
             }
