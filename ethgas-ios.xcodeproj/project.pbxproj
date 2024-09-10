@@ -16,7 +16,7 @@
 		0906FD7A25A3B56F005B4992 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 0906FD7925A3B56F005B4992 /* FirebaseDatabase */; };
 		0906FD7D25A3B66F005B4992 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0906FD7C25A3B66F005B4992 /* AppDelegate.swift */; };
 		0906FD8A25A44956005B4992 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0906FD8925A44955005B4992 /* GoogleService-Info.plist */; };
-		090FB42B25CF2FD200D12456 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FB42A25CF2FD200D12456 /* LineView.swift */; };
+		090FB42B25CF2FD200D12456 /* ChartLineMarksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FB42A25CF2FD200D12456 /* ChartLineMarksView.swift */; };
 		090FB43C25CF379900D12456 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FB43B25CF379900D12456 /* ChartsView.swift */; };
 		090FB43E25D087AA00D12456 /* GraphEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FB43D25D087AA00D12456 /* GraphEntry.swift */; };
 		090FB44025D0887600D12456 /* Graphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FB43F25D0887600D12456 /* Graphs.swift */; };
@@ -91,7 +91,7 @@
 		09D1485F284BC9B5009A6800 /* MainViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D1485E284BC9B5009A6800 /* MainViewTests.swift */; };
 		09D14860284BC9FF009A6800 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0906FD6625A3B42D005B4992 /* MainView.swift */; };
 		09D14861284C79FD009A6800 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FB43B25CF379900D12456 /* ChartsView.swift */; };
-		09D14862284C7B2F009A6800 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FB42A25CF2FD200D12456 /* LineView.swift */; };
+		09D14862284C7B2F009A6800 /* ChartLineMarksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FB42A25CF2FD200D12456 /* ChartLineMarksView.swift */; };
 		09D14864284C7C5B009A6800 /* ChartsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14863284C7C5B009A6800 /* ChartsViewModel.swift */; };
 		09D14866284C7CFC009A6800 /* ChartsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14865284C7CFC009A6800 /* ChartsViewModelProtocol.swift */; };
 		09D14867284C7CFC009A6800 /* ChartsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D14865284C7CFC009A6800 /* ChartsViewModelProtocol.swift */; };
@@ -235,7 +235,7 @@
 		0906FD7C25A3B66F005B4992 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0906FD8925A44955005B4992 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0906FD8E25A4670E005B4992 /* ethgas-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ethgas-ios.entitlements"; sourceTree = "<group>"; };
-		090FB42A25CF2FD200D12456 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		090FB42A25CF2FD200D12456 /* ChartLineMarksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartLineMarksView.swift; sourceTree = "<group>"; };
 		090FB43B25CF379900D12456 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
 		090FB43D25D087AA00D12456 /* GraphEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphEntry.swift; sourceTree = "<group>"; };
 		090FB43F25D0887600D12456 /* Graphs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graphs.swift; sourceTree = "<group>"; };
@@ -416,7 +416,7 @@
 				09BD52F025B4435100D751F2 /* SignInWithAppleButton.swift */,
 				09BD52E825B393FD00D751F2 /* AlertsView.swift */,
 				090FB43B25CF379900D12456 /* ChartsView.swift */,
-				090FB42A25CF2FD200D12456 /* LineView.swift */,
+				090FB42A25CF2FD200D12456 /* ChartLineMarksView.swift */,
 				09B0C21B260A3D2E00C73CB6 /* HotView.swift */,
 				09F69E6B272D2356000996A2 /* FrequencySelectionView.swift */,
 				09852A142735A93B00490B8A /* FeesView.swift */,
@@ -865,7 +865,7 @@
 				09847AA928704FE80034E719 /* Bundle+version.swift in Sources */,
 				09852A1B2735BF2900490B8A /* CardValueSmallView.swift in Sources */,
 				09D14869284C7E3B009A6800 /* MockChartsViewModel.swift in Sources */,
-				090FB42B25CF2FD200D12456 /* LineView.swift in Sources */,
+				090FB42B25CF2FD200D12456 /* ChartLineMarksView.swift in Sources */,
 				0961740826C6E2CF00683EBE /* Strings.swift in Sources */,
 				0961740D26C6E34600683EBE /* String+Localizable.swift in Sources */,
 				0956321B2C7C976D00B41227 /* Double+ToString.swift in Sources */,
@@ -989,7 +989,7 @@
 				09D14854284B7F6C009A6800 /* MockAlertsView.swift in Sources */,
 				09D1485F284BC9B5009A6800 /* MainViewTests.swift in Sources */,
 				09D1484F284B7C76009A6800 /* AlertsViewModelProtocol.swift in Sources */,
-				09D14862284C7B2F009A6800 /* LineView.swift in Sources */,
+				09D14862284C7B2F009A6800 /* ChartLineMarksView.swift in Sources */,
 				09DCD8E0282EC5DC004D51EF /* String+Localizable.swift in Sources */,
 				09D14848284B6519009A6800 /* ItemFeeView.swift in Sources */,
 				09DCD8F4282EE36F004D51EF /* GraphEntry.swift in Sources */,
