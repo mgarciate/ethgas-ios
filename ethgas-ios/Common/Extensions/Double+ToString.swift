@@ -14,6 +14,13 @@ extension Double {
     }
     
     var gasValueStringShort: String {
-        return Int(self) < 10 ? String(format: "%.1f", self) : "\(Int(self))"
+        return switch self {
+        case ..<0.1:
+            String(format: "%.2f", self)
+        case 0.1..<10:
+            String(format: "%.1f", self)
+        default:
+            "\(Int(self))"
+        }
     }
 }
